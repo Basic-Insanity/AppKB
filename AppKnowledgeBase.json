@@ -1,24 +1,39 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-11-05T12:43:06.802743+00:00",
-  "generatedAt": "2026-11-05T12:43:06.802749+00:00",
+  "lastUpdated": "2026-11-05T13:30:24.118303+00:00",
+  "generatedAt": "2026-11-05T13:30:24.118310+00:00",
   "sourceData": {
     "catalogIntelligence": true,
     "appDetectionTracking": true,
     "appMetadata": true,
     "groupRecommendations": true
   },
-  "applicationCount": 184,
+  "applicationCount": 183,
   "applications": [
+    {
+      "displayName": "**Sap Addins",
+      "sourceAppName": "sap add-in",
+      "publisher": "SAP",
+      "category": "Other",
+      "installationType": "available",
+      "entraGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppFileSystemRule: path=\"c:\\\\temp\\\\mem\"; fileOrFolderName=\"SAPaddinsdetect.txt\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "c8cc4672-fa65-4de7-9dff-c72e102bf5d6"
+    },
     {
       "displayName": "7-Zip (x64)",
       "sourceAppName": "7-Zip",
       "publisher": "Igor Pavlov",
       "category": "Dependency app",
       "installationType": "available",
-      "entraGroups": [
-        "MEM-APPU-7-Zip x64"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -52,9 +67,7 @@
       "publisher": "ADOBE INC.",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-Adobe Creative Cloud"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -72,7 +85,21 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [
-        "MEM-APPU-Adobe Pro"
+        {
+          "name": "MEM GT ACCT Device",
+          "intent": "available",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT MKTG Device",
+          "intent": "available",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT MRCH Device",
+          "intent": "available",
+          "type": "device"
+        }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -97,7 +124,7 @@
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
-        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Temp\\\\\"; fileOrFolderName=\"DriversInstalled.txt\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Temp\\\\\"; fileOrFolderName=\"DriversInstalled3.txt\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
       "id": "e07783a2-0dff-4cf5-a183-f5daccb40f15"
     },
@@ -156,7 +183,13 @@
       "publisher": "Motorola",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT SMCD",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -222,9 +255,7 @@
       "publisher": "Scooter Software",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        "MEM-APPU-Beyond Compare 4"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -241,9 +272,7 @@
       "publisher": "Scooter Software",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-Beyond Compare 5"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -260,9 +289,7 @@
       "publisher": "Bluebeam, inc.",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-Bluebeam"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -330,7 +357,13 @@
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT Canada Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -347,7 +380,13 @@
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT Canada Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -381,7 +420,13 @@
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT Canada Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -398,7 +443,13 @@
       "publisher": "TechSmith",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT LDCORP Device",
+          "intent": "available",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -431,7 +482,13 @@
       "publisher": "TechSmith",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT LDCORP Device",
+          "intent": "available",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -448,7 +505,13 @@
       "publisher": "TechSmith",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT LDCORP Device",
+          "intent": "available",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -465,7 +528,13 @@
       "publisher": "TechSmith",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT LDCORP Device",
+          "intent": "available",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -499,7 +568,13 @@
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT DCRTL Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -516,9 +591,7 @@
       "publisher": "Cato Networks",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-Cato VPN"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -547,7 +620,7 @@
       "id": "d7d84e48-5b37-4189-8a27-226b5ecefc20"
     },
     {
-      "displayName": "Cisco AnyConnect Secure Mobility Client",
+      "displayName": "Cisco Anyconnect",
       "sourceAppName": "cisco anyconnect",
       "publisher": "Cisco",
       "category": "Other",
@@ -559,9 +632,9 @@
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
-        "rule": "win32LobAppProductCodeRule: productCode=\"{ECB9C055-4ECE-438C-AC50-2B09D76377D6}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
+        "rule": "win32LobAppProductCodeRule: productCode=\"{9ED029FA-48FE-4071-8444-BD80D2435FDD}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
       },
-      "id": "22548624-52d8-4c24-9a93-42726ce66306"
+      "id": "5f322967-65a6-439a-8c48-bb557e39e8bb"
     },
     {
       "displayName": "Citrix Workspace App",
@@ -570,7 +643,16 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [
-        "MEM-APPU-Citrix Workspace"
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Device",
+          "intent": "required",
+          "type": "device"
+        }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -622,9 +704,7 @@
       "publisher": "Salient Systems Corporation",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-CompleteView Video Client"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -658,7 +738,13 @@
       "publisher": "GemVision",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM-AppU-CounterSketch",
+          "intent": "required",
+          "type": "user"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -691,9 +777,7 @@
       "publisher": "Signet Jewelers IT",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        "MEM-APPU-Dallas Credit Tables"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -710,9 +794,7 @@
       "publisher": "DBeaver Corp",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-DBeaver"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -745,9 +827,7 @@
       "publisher": "Signet Jewelers IT",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        "MEM-APPU-DC Incidents Shortcut"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -764,7 +844,13 @@
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT ALPHA",
+          "intent": "excluded",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -814,9 +900,7 @@
       "publisher": "Borland",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-Delphi 7"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -834,7 +918,16 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [
-        "MEM-APPU-DinoCapture"
+        {
+          "name": "MEM GT SMA Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT SST Device",
+          "intent": "required",
+          "type": "device"
+        }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -852,7 +945,13 @@
       "publisher": "Synaptics",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -886,7 +985,13 @@
       "publisher": "Sentry",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT SMCD",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -919,7 +1024,23 @@
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT VJC3 Test",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -936,7 +1057,13 @@
       "publisher": "Microsoft",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT DCORP Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -953,9 +1080,7 @@
       "publisher": "Adoptium",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        "MEM-APPU-Eclipse Temurin"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -972,9 +1097,7 @@
       "publisher": "Signet Jewelers IT",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-EIS"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1035,31 +1158,12 @@
       "id": "e828adda-bf38-4cc4-8b3c-0aa8a5c55a5d"
     },
     {
-      "displayName": "Epson Printer Driver",
-      "sourceAppName": "epson printer driver",
-      "publisher": "Epson",
-      "category": "Other",
-      "installationType": "available",
-      "entraGroups": [],
-      "isPrerequisite": false,
-      "coreAppDependency": null,
-      "detection": {
-        "status": "Configured rules",
-        "method": "intune_rules",
-        "rules": [],
-        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Windows\\\\System32\\\\drivers\\\\\"; fileOrFolderName=\"TMUSB64.sys\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
-      },
-      "id": "924a1d2d-5574-4b87-998b-5b9702e0c9e0"
-    },
-    {
       "displayName": "Eraser",
       "sourceAppName": "eraser",
       "publisher": "Heidi",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        "MEM-APPU-Eraser"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1099,9 +1203,9 @@
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
-        "rule": "win32LobAppFileSystemRule: path=\"%ProgramFiles%\\\\FileZilla FTP Client\"; fileOrFolderName=\"filezilla.exe\"; check32BitOn64System=false; operationType=\"appVersion\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"3.67.1.0\""
+        "rule": "win32LobAppFileSystemRule: path=\"%ProgramFiles%\\\\FileZilla FTP Client\"; fileOrFolderName=\"filezilla.exe\"; check32BitOn64System=false; operationType=\"appVersion\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"3.69.1.0\""
       },
-      "id": "ce9e771a-ab11-4007-99c1-849121a90057"
+      "id": "26aaa3ad-4fb1-46cc-bbce-ac75b0446f45"
     },
     {
       "displayName": "Firefox",
@@ -1109,7 +1213,28 @@
       "publisher": "Mozilla",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT VJC3 Test",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC Device",
+          "intent": "available",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1126,9 +1251,7 @@
       "publisher": "Fortinet",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        "MEM-APPU-FortiClient"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1145,7 +1268,48 @@
       "publisher": "Microsoft Corporation",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT CORP Device",
+          "intent": "excluded",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJCtest Device",
+          "intent": "excluded",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT HOTest Device",
+          "intent": "excluded",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT DCORP Device",
+          "intent": "excluded",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC Device",
+          "intent": "excluded",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT ECORP Device",
+          "intent": "excluded",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Device",
+          "intent": "excluded",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "excluded",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1228,9 +1392,7 @@
       "publisher": "Git",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-Git"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1279,7 +1441,23 @@
       "publisher": "Palo Alto",
       "category": "Baseline",
       "installationType": "required",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT JBTest",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT AUTOP",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT ALPHA",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1296,7 +1474,18 @@
       "publisher": "Signet",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Device",
+          "intent": "available",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1357,29 +1546,18 @@
       "id": "2da53b3e-6a78-48a2-a876-6df723a9ade5"
     },
     {
-      "displayName": "Iced Tea Registry",
-      "sourceAppName": "iced tea registry",
-      "publisher": "Signet",
-      "category": "Other",
-      "installationType": "available",
-      "entraGroups": [],
-      "isPrerequisite": false,
-      "coreAppDependency": null,
-      "detection": {
-        "status": "Configured rules",
-        "method": "intune_rules",
-        "rules": [],
-        "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Edge\\\\AutoOpenFileTypes\"; valueName=\"1\"; operationType=\"string\"; operator=\"equal\"; comparisonValue=\"jnlp\""
-      },
-      "id": "f9c4abd7-fdb9-4f7e-80c1-787519384a0c"
-    },
-    {
       "displayName": "IDIS+ Center",
       "sourceAppName": "idis+ center",
       "publisher": "IDIS Global",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT SMCD",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1397,7 +1575,11 @@
       "category": "Other",
       "installationType": "available",
       "entraGroups": [
-        "MEM-APPU-IMS DBSelect"
+        {
+          "name": "MEM GT IT Device",
+          "intent": "available",
+          "type": "device"
+        }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -1416,7 +1598,76 @@
       "category": "Other",
       "installationType": "available",
       "entraGroups": [
-        "MEM-APPU-IMS Deployment"
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT SSI Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT SSW Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT DCORP Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT SMA Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT DIRM Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT DCRTL Device",
+          "intent": "available",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT MRCH Device",
+          "intent": "available",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT SST Device",
+          "intent": "available",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT MKTG Device",
+          "intent": "available",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT ACCT Device",
+          "intent": "available",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT IT Device",
+          "intent": "available",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT CORP Device",
+          "intent": "available",
+          "type": "device"
+        }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -1568,7 +1819,13 @@
       "publisher": "ADM-JBREWER",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT JBTest",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1585,7 +1842,13 @@
       "publisher": "Microsoft",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT JBTest",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1602,7 +1865,13 @@
       "publisher": "ADM-JBREWER",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT JBTest",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1619,7 +1888,13 @@
       "publisher": "Microsoft",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT JBTest",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1636,7 +1911,13 @@
       "publisher": "ADM-JBREWER",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT JBTest",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1653,7 +1934,13 @@
       "publisher": "ADM-JBREWER",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT JBTest",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1670,7 +1957,18 @@
       "publisher": "Signet jewelers",
       "category": "Baseline",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT Canada Device",
+          "intent": "excluded",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT DCRTL Device",
+          "intent": "excluded",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1704,7 +2002,13 @@
       "publisher": "Microsoft Corporation",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT KIOSK-SSPR",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1721,9 +2025,7 @@
       "publisher": "Signet Jewelers IT",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-Lawson"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1758,7 +2060,26 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [
-        "MEM-APPU-Logi Tune"
+        {
+          "name": "MEM GT VJCtest Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Test",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC Device",
+          "intent": "required",
+          "type": "device"
+        }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -1808,9 +2129,7 @@
       "publisher": "Microsoft",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        "MEM-APPU-Microsoft OpenJDK"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1875,9 +2194,7 @@
       "publisher": "Mobatek",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-MobaXterm"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1911,7 +2228,33 @@
       "publisher": "NiCE",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT VJCtest Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Test",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1923,27 +2266,11 @@
       "id": "42ff5a4e-1daa-441c-8513-40eed8acb582"
     },
     {
-      "displayName": "NinjaOne Agent; NinjaOne Agent STS",
+      "displayName": "NinjaOne Agent; STS - NinjaOne Agent",
       "sourceAppName": "NinjaOne",
       "publisher": "NinjaRMM LLC",
       "category": "Baseline",
       "installationType": "required",
-      "entraGroups": [],
-      "isPrerequisite": false,
-      "coreAppDependency": null,
-      "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
-        "rules": [],
-        "rule": ""
-      }
-    },
-    {
-      "displayName": "Node.js",
-      "sourceAppName": "Node.js",
-      "publisher": "Node.js Foundation",
-      "category": "Other",
-      "installationType": "available",
       "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -1960,9 +2287,7 @@
       "publisher": "The Notepad++ Team",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        "MEM-APPU-Notepad++"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -1979,9 +2304,7 @@
       "publisher": "OBS Project",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-OBS Studio"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -2084,7 +2407,11 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [
-        "MEM-APPU-Plex Component Host"
+        {
+          "name": "MEM GT SMA Device",
+          "intent": "required",
+          "type": "device"
+        }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -2119,7 +2446,13 @@
       "publisher": "HP",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -2201,7 +2534,28 @@
       "publisher": "Vasion",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT ALPHA",
+          "intent": "excluded",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT DCORP Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT CORP Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -2218,9 +2572,7 @@
       "publisher": "Simon Tatham",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-PuTTY"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -2232,7 +2584,7 @@
       "id": "da009a79-b416-4179-9be8-7e71c0868fda"
     },
     {
-      "displayName": "Python",
+      "displayName": "Python 3.13",
       "sourceAppName": "Python",
       "publisher": "CN=4975D53F-AA7E-49A5-8B49-EA4FDC1BB66B",
       "category": "Other",
@@ -2241,11 +2593,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"9PNRBTZXMB4Z\""
+      },
+      "id": "0578b931-7b5f-4dea-bd48-57331f296847"
     },
     {
       "displayName": "QR Code Scanner",
@@ -2433,30 +2786,27 @@
       "id": "263cf015-eea6-46d4-b056-48c5e819a2f2"
     },
     {
-      "displayName": "SAP EPM Add-Ins",
-      "sourceAppName": "sap add-in",
-      "publisher": "SAP",
-      "category": "Other",
-      "installationType": "available",
-      "entraGroups": [],
-      "isPrerequisite": false,
-      "coreAppDependency": null,
-      "detection": {
-        "status": "Configured rules",
-        "method": "intune_rules",
-        "rules": [],
-        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\temp\"; fileOrFolderName=\"EPMinstall.log\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
-      },
-      "id": "5e52258b-ffe2-486f-b1e2-977cebe6fd6c"
-    },
-    {
       "displayName": "SAP GUI",
       "sourceAppName": "sap gui",
       "publisher": "SAP",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [
-        "MEM-APPU-SAP GUI"
+        {
+          "name": "MEM GT EXEC",
+          "intent": "excluded",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Device",
+          "intent": "required",
+          "type": "device"
+        }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -2507,7 +2857,13 @@
       "publisher": "Sentinel One",
       "category": "Baseline",
       "installationType": "required",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT SMCD",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -2674,7 +3030,18 @@
       "publisher": "Sterling Jewelers",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT VJC3 Test",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -2691,7 +3058,13 @@
       "publisher": "Articulate",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT LDCORP Device",
+          "intent": "available",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -2701,6 +3074,40 @@
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\Articulate\\\\Articulate Storyline 2\"; fileOrFolderName=\"Storyline.exe\"; check32BitOn64System=true; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
       "id": "a9bdf8ee-ae16-4224-94aa-643c507e5df1"
+    },
+    {
+      "displayName": "STS - Epson Printer Driver",
+      "sourceAppName": "sts - epson printer driver",
+      "publisher": "Epson",
+      "category": "Other",
+      "installationType": "available",
+      "entraGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Windows\\\\System32\\\\drivers\\\\\"; fileOrFolderName=\"TMUSB64.sys\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "924a1d2d-5574-4b87-998b-5b9702e0c9e0"
+    },
+    {
+      "displayName": "STS - LAPS",
+      "sourceAppName": "sts - laps",
+      "publisher": "Microsoft",
+      "category": "Other",
+      "installationType": "available",
+      "entraGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "detection": {
+        "status": "Configured MSI identity",
+        "method": "msi",
+        "rules": [],
+        "rule": "MSI: ProductCode=\"{97E2CA7B-B657-4FF7-A6DB-30ECC73E1E28}\"; ProductVersion=\"6.2.0.0\""
+      },
+      "id": "0a063dce-965e-420a-890e-da4c8c2a4c85"
     },
     {
       "displayName": "Tableau 2024.3; Tableau Prep Builder 2025.3",
@@ -2724,9 +3131,7 @@
       "publisher": "Salesforce, Inc",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-Tableau Prep Builder 2025.3"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -2743,7 +3148,13 @@
       "publisher": "Microsoft",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT JBTest",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -2794,7 +3205,18 @@
       "publisher": "Star Micronics",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT SSI Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT SST Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -2910,9 +3332,7 @@
       "publisher": "VideoLAN",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-VLC Media Player"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -2995,9 +3415,7 @@
       "publisher": "WinSCP",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        "MEM-APPU-WinSCP"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -3014,9 +3432,7 @@
       "publisher": "Signet Jewelers IT",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        "MEM-APPU-xStore Reprint Utility"
-      ],
+      "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
@@ -3101,7 +3517,11 @@
       "category": "Other",
       "installationType": "available",
       "entraGroups": [
-        "MEM-APPU-Zebra Designer 3"
+        {
+          "name": "MEM GT SMA Device",
+          "intent": "required",
+          "type": "device"
+        }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -3120,7 +3540,46 @@
       "category": "Other",
       "installationType": "available",
       "entraGroups": [
-        "MEM-APPU-Zebra Printer Setup Utilities"
+        {
+          "name": "MEM GT DCORP Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT SMA Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT DIRM Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT DCRTL Device",
+          "intent": "available",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT Canada Device",
+          "intent": "available",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT SSI Device",
+          "intent": "available",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT SST Device",
+          "intent": "available",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT SSW Device",
+          "intent": "available",
+          "type": "device"
+        }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -3154,7 +3613,13 @@
       "publisher": "Zscaler Inc",
       "category": "Baseline",
       "installationType": "required",
-      "entraGroups": [],
+      "entraGroups": [
+        {
+          "name": "MEM GT SMCD",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
