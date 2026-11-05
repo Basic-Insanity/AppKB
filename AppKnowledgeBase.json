@@ -1,75 +1,146 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-11-05T14:09:30.072034+00:00",
-  "generatedAt": "2026-11-05T14:09:30.072043+00:00",
+  "lastUpdated": "2026-11-05T20:09:28.994312+00:00",
+  "generatedAt": "2026-11-05T20:09:28.994318+00:00",
   "sourceData": {
     "catalogIntelligence": true,
     "appDetectionTracking": true,
     "appMetadata": true,
     "groupRecommendations": true
   },
-  "applicationCount": 183,
+  "applicationCount": 212,
   "applications": [
     {
-      "displayName": "**Sap Addins",
-      "sourceAppName": "sap add-in",
-      "publisher": "SAP",
-      "category": "Other",
-      "installationType": "available",
-      "entraGroups": [],
-      "isPrerequisite": false,
-      "coreAppDependency": null,
-      "detection": {
-        "status": "Configured rules",
-        "method": "intune_rules",
-        "rules": [],
-        "rule": "win32LobAppFileSystemRule: path=\"c:\\\\temp\\\\mem\"; fileOrFolderName=\"SAPaddinsdetect.txt\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
-      },
-      "id": "c8cc4672-fa65-4de7-9dff-c72e102bf5d6"
-    },
-    {
-      "displayName": "7-Zip (x64)",
+      "displayName": "7-Zip",
       "sourceAppName": "7-Zip",
       "publisher": "Igor Pavlov",
       "category": "Dependency app",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"%ProgramFiles%\\\\7-Zip\"; fileOrFolderName=\"7zFM.exe\"; check32BitOn64System=false; operationType=\"version\"; operator=\"equal\"; comparisonValue=\"24.9.0.0\"\nwin32LobAppFileSystemRule: path=\"%ProgramFiles%\\\\7-Zip\"; fileOrFolderName=\"7zFM.exe\"; check32BitOn64System=false; operationType=\"sizeInBytes\"; operator=\"equal\"; comparisonValue=\"990720\"\nwin32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall\\\\{23170F69-40C1-2702-2409-000001000000}\"; valueName=\"DisplayVersion\"; operationType=\"string\"; operator=\"equal\"; comparisonValue=\"24.09.00.0\""
       },
+      "bundleParent": "7-Zip (x64)",
       "id": "196d3e53-4bc1-4e11-87a1-03c091b42014"
     },
     {
-      "displayName": "Adobe Acrobat Reader DC",
+      "displayName": "Adobe Acrobat",
+      "sourceAppName": "Adobe Acrobat",
+      "publisher": "Adobe Inc.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "bundleParent": "Adobe Pro",
+      "id": "c12e8bd4-a64f-49f0-ae88-9146dc12e2da"
+    },
+    {
+      "displayName": "Adobe Acrobat Reader",
       "sourceAppName": "Adobe Acrobat Reader",
       "publisher": "Adobe Systems Incorporated",
       "category": "Baseline",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Platform-managed detection",
         "method": "platform_managed",
         "rules": [],
         "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDP273C0XHQH2\""
       },
+      "bundleParent": "Adobe Acrobat Reader DC",
       "id": "4a9640b7-4367-48a1-9b87-18b83bf514c3"
     },
     {
-      "displayName": "Adobe Creative Cloud",
+      "displayName": "Adobe After Effects",
       "sourceAppName": "Adobe After Effects",
       "publisher": "ADOBE INC.",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Adobe Audition",
+      "sourceAppName": "Adobe Audition",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Adobe Bridge",
+      "sourceAppName": "Adobe Bridge",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Adobe Creative Cloud",
+      "sourceAppName": "Adobe Creative Cloud",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Platform-managed detection",
         "method": "platform_managed",
@@ -79,64 +150,256 @@
       "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
     },
     {
-      "displayName": "Adobe Pro",
-      "sourceAppName": "Adobe Acrobat",
-      "publisher": "Adobe Inc.",
+      "displayName": "Adobe Dreamweaver",
+      "sourceAppName": "Adobe Dreamweaver",
+      "publisher": "ADOBE INC.",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        {
-          "name": "MEM GT ACCT Device",
-          "intent": "available",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT MKTG Device",
-          "intent": "available",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT MRCH Device",
-          "intent": "available",
-          "type": "device"
-        }
-      ],
+      "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
-        "status": "Configured rules",
-        "method": "intune_rules",
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
         "rules": [],
-        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
       },
-      "id": "c12e8bd4-a64f-49f0-ae88-9146dc12e2da"
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
     },
     {
-      "displayName": "Alteryx + Supported Database Drivers",
+      "displayName": "Adobe Illustrator",
+      "sourceAppName": "Adobe Illustrator",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Adobe InDesign",
+      "sourceAppName": "Adobe InDesign",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Adobe Lightroom",
+      "sourceAppName": "Adobe Lightroom",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Adobe Media Encoder",
+      "sourceAppName": "Adobe Media Encoder",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Adobe Media Encoder 2025",
+      "sourceAppName": "Adobe Media Encoder 2025",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Adobe Photoshop",
+      "sourceAppName": "Adobe Photoshop",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Adobe Premiere Pro",
+      "sourceAppName": "Adobe Premiere Pro",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Adobe Premiere Rush",
+      "sourceAppName": "Adobe Premiere Rush",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Adobe Substance 3D Sampler",
+      "sourceAppName": "Adobe Substance 3D Sampler",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Adobe.XD",
+      "sourceAppName": "Adobe.XD",
+      "publisher": "ADOBE INC.",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
+        "rules": [],
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "bundleParent": "Adobe Creative Cloud",
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
+    },
+    {
+      "displayName": "Alteryx Designer",
       "sourceAppName": "Alteryx Designer",
       "publisher": "Signet Jewelers IT MW",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Temp\\\\\"; fileOrFolderName=\"DriversInstalled3.txt\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Alteryx + Supported Database Drivers",
       "id": "e07783a2-0dff-4cf5-a183-f5daccb40f15"
     },
     {
       "displayName": "Alteryx Predictive Tools with R 4.2.3",
       "sourceAppName": "Alteryx Predictive Tools with R 4.2.3",
       "publisher": "R Development Core Team",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -151,8 +414,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
@@ -165,11 +430,13 @@
       "displayName": "AuditBoard Sync",
       "sourceAppName": "AuditBoard Sync",
       "publisher": "AuditBoard, Inc.",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -178,12 +445,31 @@
       }
     },
     {
-      "displayName": "Avigilon",
+      "displayName": "AutoCAD",
+      "sourceAppName": "AutoCAD",
+      "publisher": "Autodesk",
+      "category": "Other",
+      "installationType": "available",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Not tracked",
+        "method": "not_configured",
+        "rules": [],
+        "rule": ""
+      }
+    },
+    {
+      "displayName": "avigilon",
       "sourceAppName": "avigilon",
       "publisher": "Motorola",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT SMCD",
           "intent": "required",
@@ -192,23 +478,27 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"AvigilonUnityClient-Standalone-8.7.0.26.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Avigilon",
       "id": "2dcb57c0-6bd2-43eb-b516-31315fe807b4"
     },
     {
       "displayName": "AWS Command Line Interface v2",
       "sourceAppName": "AWS Command Line Interface v2",
       "publisher": "Amazon Web Services",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -220,11 +510,13 @@
       "displayName": "Azure Data Studio",
       "sourceAppName": "Azure Data Studio",
       "publisher": "Microsoft Corporation",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -233,20 +525,23 @@
       }
     },
     {
-      "displayName": "Banter Stacking Tool",
+      "displayName": "banter stacking tool",
       "sourceAppName": "banter stacking tool",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Banter Stacking Tool",
       "id": "d07c917a-bc4e-4f17-adba-cff3332aeeb2"
     },
     {
@@ -256,8 +551,10 @@
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured MSI identity",
         "method": "msi",
@@ -273,8 +570,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -290,8 +589,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -301,63 +602,73 @@
       "id": "b324a7d9-ef47-40ec-be7c-204b51dba4d1"
     },
     {
-      "displayName": "Bomgar Representative Console",
+      "displayName": "bomgar representative console",
       "sourceAppName": "bomgar representative console",
       "publisher": "BeyondTrust",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "Bomgar Representative Console",
       "id": "97b08e06-4d2c-45ec-b844-41be5f1bf6d2"
     },
     {
-      "displayName": "Borland BDE",
+      "displayName": "borland bde",
       "sourceAppName": "borland bde",
       "publisher": "Borland",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "Borland BDE",
       "id": "c3f35bf2-d8db-40eb-abfa-bdeb6124b784"
     },
     {
-      "displayName": "Breitling Warranty Website",
+      "displayName": "breitling warranty website",
       "sourceAppName": "breitling warranty website",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Breitling Warranty Website",
       "id": "7a4e721d-2849-441b-a9f9-8bfa63007465"
     },
     {
-      "displayName": "C1 Canada Move Links",
+      "displayName": "c1 canada move links",
       "sourceAppName": "c1 canada move links",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT Canada Device",
           "intent": "required",
@@ -366,21 +677,24 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"MOVE CA - PROD.lnk\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2024-08-23T04:00:00.000Z\""
       },
+      "bundleParent": "C1 Canada Move Links",
       "id": "b5180775-c4a3-4536-8388-b40005b3f63d"
     },
     {
-      "displayName": "C1 Launcher Links",
+      "displayName": "c1 launcher links",
       "sourceAppName": "c1 launcher links",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT Canada Device",
           "intent": "required",
@@ -389,38 +703,44 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"Launch-ELVIS-PROD.lnk.lnk\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2025-01-17T05:00:00.000Z\""
       },
+      "bundleParent": "C1 Launcher Links",
       "id": "6c9f9611-1e54-47c6-8a39-6ff2afc6c463"
     },
     {
-      "displayName": "C1Links",
+      "displayName": "c1links",
       "sourceAppName": "c1links",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"ELVIS PROD.lnk\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2024-06-27T04:00:00.000Z\""
       },
+      "bundleParent": "C1Links",
       "id": "daf3016a-f9de-49c0-a579-91021cc37071"
     },
     {
-      "displayName": "C1Links_7_19",
+      "displayName": "c1links_7_19",
       "sourceAppName": "c1links_7_19",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT Canada Device",
           "intent": "required",
@@ -429,13 +749,34 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"ELVIS PROD.lnk\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2024-07-18T04:00:00.000Z\""
       },
+      "bundleParent": "C1Links_7_19",
       "id": "e384715c-1c61-45e4-8396-d197e509a7a3"
+    },
+    {
+      "displayName": "Camtasia",
+      "sourceAppName": "Camtasia",
+      "publisher": "TechSmith Corporation",
+      "category": "PendingBuild",
+      "installationType": "available",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Not tracked",
+        "method": "not_configured",
+        "rules": [],
+        "rule": ""
+      },
+      "bundleParent": "Camtasia 2018; Camtasia 2019; Camtasia 2021; Camtasia 2022"
     },
     {
       "displayName": "Camtasia 2018",
@@ -443,15 +784,11 @@
       "publisher": "TechSmith",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        {
-          "name": "MEM GT LDCORP Device",
-          "intent": "available",
-          "type": "device"
-        }
-      ],
+      "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -461,36 +798,16 @@
       "id": "48d565cb-d772-4ff3-8567-6406598d05f4"
     },
     {
-      "displayName": "Camtasia 2018; Camtasia 2019; Camtasia 2021; Camtasia 2022",
-      "sourceAppName": "Camtasia",
-      "publisher": "TechSmith Corporation",
-      "category": "Other",
-      "installationType": "available",
-      "entraGroups": [],
-      "isPrerequisite": false,
-      "coreAppDependency": null,
-      "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
-        "rules": [],
-        "rule": ""
-      }
-    },
-    {
       "displayName": "Camtasia 2019",
       "sourceAppName": "Camtasia 2019",
       "publisher": "TechSmith",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        {
-          "name": "MEM GT LDCORP Device",
-          "intent": "available",
-          "type": "device"
-        }
-      ],
+      "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -505,15 +822,11 @@
       "publisher": "TechSmith",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        {
-          "name": "MEM GT LDCORP Device",
-          "intent": "available",
-          "type": "device"
-        }
-      ],
+      "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -528,15 +841,11 @@
       "publisher": "TechSmith",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        {
-          "name": "MEM GT LDCORP Device",
-          "intent": "available",
-          "type": "device"
-        }
-      ],
+      "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -552,8 +861,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
@@ -563,12 +874,13 @@
       "id": "d378075f-a895-4bd5-bae1-8ef1961e07de"
     },
     {
-      "displayName": "Carousel_FLEX AWL Shortcut and PC Rename",
+      "displayName": "carousel_flex awl shortcut and pc rename",
       "sourceAppName": "carousel_flex awl shortcut and pc rename",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT DCRTL Device",
           "intent": "required",
@@ -577,12 +889,14 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"AWL_Start.lnk\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Carousel_FLEX AWL Shortcut and PC Rename",
       "id": "917dfc52-c2dc-4ebd-a769-1f96ebc99ca7"
     },
     {
@@ -592,8 +906,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -609,8 +925,10 @@
       "category": "Baseline",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -620,29 +938,33 @@
       "id": "d7d84e48-5b37-4189-8a27-226b5ecefc20"
     },
     {
-      "displayName": "Cisco Anyconnect",
+      "displayName": "cisco anyconnect",
       "sourceAppName": "cisco anyconnect",
       "publisher": "Cisco",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppProductCodeRule: productCode=\"{9ED029FA-48FE-4071-8444-BD80D2435FDD}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
       },
+      "bundleParent": "Cisco Anyconnect",
       "id": "5f322967-65a6-439a-8c48-bb557e39e8bb"
     },
     {
-      "displayName": "Citrix Workspace App",
+      "displayName": "Citrix Workspace",
       "sourceAppName": "Citrix Workspace",
       "publisher": "Citrix Systems, Inc.",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT C3S Device",
           "intent": "required",
@@ -656,84 +978,98 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Platform-managed detection",
         "method": "platform_managed",
         "rules": [],
         "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPFCG3278HX4X9\""
       },
+      "bundleParent": "Citrix Workspace App",
       "id": "daa96bc0-a15f-4f52-a71a-2759bc5ca266"
     },
     {
-      "displayName": "Claude CoWork App",
+      "displayName": "Claude",
       "sourceAppName": "Claude",
       "publisher": "Anthropic",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "Claude CoWork App",
       "id": "13d33fd4-8365-4457-bae1-e6ac14dce0b9"
     },
     {
-      "displayName": "Company Portal",
+      "displayName": "company portal",
       "sourceAppName": "company portal",
       "publisher": "Microsoft Corporation",
       "category": "Baseline",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Platform-managed detection",
         "method": "platform_managed",
         "rules": [],
         "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"9WZDNCRFJ3PZ\""
       },
+      "bundleParent": "Company Portal",
       "id": "ba24b5a8-1dc1-4f30-b614-411d5320a01e"
     },
     {
-      "displayName": "CompleteView Video Client",
+      "displayName": "CompleteView",
       "sourceAppName": "CompleteView",
       "publisher": "Salient Systems Corporation",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppProductCodeRule: productCode=\"{BCEE374B-33D6-4819-9D80-5D627AD5F31A}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
       },
+      "bundleParent": "CompleteView Video Client",
       "id": "5eaa2665-74f7-40e0-adaa-288efd3f3582"
     },
     {
-      "displayName": "Component Ordering Website",
+      "displayName": "component ordering website",
       "sourceAppName": "component ordering website",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Component Ordering Website",
       "id": "f63a1824-c2ed-40d6-8490-97a07eb26b67"
     },
     {
-      "displayName": "CounterSketch",
+      "displayName": "countersketch",
       "sourceAppName": "countersketch",
       "publisher": "GemVision",
       "category": "Other",
@@ -745,25 +1081,56 @@
           "type": "user"
         }
       ],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"CounterSketch.lnk\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "CounterSketch",
       "id": "e37992d8-3d11-41b3-8aa9-509f6c67dcd9"
+    },
+    {
+      "displayName": "CreditShortCut",
+      "sourceAppName": "CreditShortCut",
+      "publisher": "Signet",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "bundleParent": "Globes - Solar Credit Repair",
+      "id": "3db9aa97-948f-47da-9e23-787c5dd3dfa4"
     },
     {
       "displayName": "CutePDF Writer",
       "sourceAppName": "CutePDF Writer",
       "publisher": "Acro Software Inc.",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -772,48 +1139,56 @@
       }
     },
     {
-      "displayName": "Dallas Credit Tables",
+      "displayName": "dallas credit tables",
       "sourceAppName": "dallas credit tables",
       "publisher": "Signet Jewelers IT",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "Dallas Credit Tables",
       "id": "de9bd1f9-e17f-442d-bf62-5860b3d8250f"
     },
     {
-      "displayName": "DBeaver 25.3.1",
+      "displayName": "DBeaver",
       "sourceAppName": "DBeaver",
       "publisher": "DBeaver Corp",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\DBeaver\"; fileOrFolderName=\"dbeaver.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "DBeaver 25.3.1",
       "id": "8b3e3039-17c0-4118-8839-fbe34b698c0d"
     },
     {
       "displayName": "DbVisualizer",
       "sourceAppName": "DbVisualizer",
       "publisher": "DbVis Software AB",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -822,54 +1197,56 @@
       }
     },
     {
-      "displayName": "DC Incidents Shortcut",
+      "displayName": "dc incidents shortcut",
       "sourceAppName": "dc incidents shortcut",
       "publisher": "Signet Jewelers IT",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"DC Incidents Form.url\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "DC Incidents Shortcut",
       "id": "9d90e685-868a-4e41-96ca-15844bd78026"
     },
     {
-      "displayName": "Dell Bloat Remove",
+      "displayName": "dell bloat remove",
       "sourceAppName": "dell bloat remove",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        {
-          "name": "MEM GT ALPHA",
-          "intent": "excluded",
-          "type": "device"
-        }
-      ],
+      "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "Dell Bloat Remove",
       "id": "eed708d1-db15-41e0-8bed-c26c0e811c66"
     },
     {
       "displayName": "dell™ toad™ data modeler",
       "sourceAppName": "dell™ toad™ data modeler",
       "publisher": "Dell",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -878,46 +1255,53 @@
       }
     },
     {
-      "displayName": "Delphi 5",
+      "displayName": "delphi 5",
       "sourceAppName": "delphi 5",
       "publisher": "Borland",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\WOW6432Node\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall\\\\Delphi5\"; valueName=\"UninstallString\"; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=\"\""
       },
+      "bundleParent": "Delphi 5",
       "id": "4f05ed9e-60ad-4243-ad1a-4ab8902b5d83"
     },
     {
-      "displayName": "Delphi 7 and TeamSource",
+      "displayName": "Delphi 7",
       "sourceAppName": "Delphi 7",
       "publisher": "Borland",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\Borland\\\\Delphi7\\\\Bin\"; fileOrFolderName=\"delphi32.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Delphi 7 and TeamSource",
       "id": "278eece1-038c-4cdc-a9cf-91b0ff3e461c"
     },
     {
-      "displayName": "DinoCapture 2.0",
+      "displayName": "DinoCapture",
       "sourceAppName": "DinoCapture",
       "publisher": "Dino-Lite",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT SMA Device",
           "intent": "required",
@@ -931,21 +1315,24 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\DinoCapture 2.0\"; fileOrFolderName=\"DinoCapture.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "DinoCapture 2.0",
       "id": "95a52169-53bd-4864-8086-e91076ad9296"
     },
     {
-      "displayName": "DisplayLink",
+      "displayName": "displaylink",
       "sourceAppName": "displaylink",
       "publisher": "Synaptics",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT C3S Device",
           "intent": "required",
@@ -954,12 +1341,14 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "DisplayLink",
       "id": "2ab47621-a13d-47a2-8c82-a258ddd98fa7"
     },
     {
@@ -969,8 +1358,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured MSI identity",
         "method": "msi",
@@ -985,7 +1376,8 @@
       "publisher": "Sentry",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT SMCD",
           "intent": "required",
@@ -994,6 +1386,7 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -1006,11 +1399,13 @@
       "displayName": "Docker Desktop",
       "sourceAppName": "Docker Desktop",
       "publisher": "Docker Inc.",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -1019,12 +1414,13 @@
       }
     },
     {
-      "displayName": "DOM Cert",
+      "displayName": "dom cert",
       "sourceAppName": "dom cert",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT VJC3 Test",
           "intent": "required",
@@ -1043,21 +1439,24 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\\\\DOM Cert\"; fileOrFolderName=\"DOM Certificate Install.pdf\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "DOM Cert",
       "id": "8b559280-5ace-4056-8a33-1e89322b77c1"
     },
     {
-      "displayName": "dotNet35",
+      "displayName": "dotnet35",
       "sourceAppName": "dotnet35",
       "publisher": "Microsoft",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT DCORP Device",
           "intent": "required",
@@ -1066,29 +1465,34 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\.NETFramework\\\\v3.0\"; valueName=null; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=\"\""
       },
+      "bundleParent": "dotNet35",
       "id": "63c1c5c3-bad2-446e-b668-479c444755fa"
     },
     {
-      "displayName": "Eclipse Temurin JDK with Hotspot 17.0.7+7 (x64)",
+      "displayName": "Eclipse Temurin JDK with Hotspot",
       "sourceAppName": "Eclipse Temurin JDK with Hotspot",
       "publisher": "Adoptium",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppProductCodeRule: productCode=\"{2D86ADAC-D84A-4867-8172-4E425F0FF8D5}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
       },
+      "bundleParent": "Eclipse Temurin JDK with Hotspot 17.0.7+7 (x64)",
       "id": "68bbed49-7dbd-4879-bf15-732cc15bf178"
     },
     {
@@ -1098,8 +1502,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -1112,11 +1518,13 @@
       "displayName": "Elvis - Canada",
       "sourceAppName": "Elvis - Canada",
       "publisher": "Sogeti",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -1128,11 +1536,13 @@
       "displayName": "Elvis - Production",
       "sourceAppName": "Elvis - Production",
       "publisher": "<no manufacturer>",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -1141,48 +1551,56 @@
       }
     },
     {
-      "displayName": "End Task Enable",
+      "displayName": "end task enable",
       "sourceAppName": "end task enable",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKEY_CURRENT_USER\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Explorer\\\\Advanced\\\\TaskbarDeveloperSettings\"; valueName=\"TaskbarEndTask\"; operationType=\"string\"; operator=\"equal\"; comparisonValue=\"1\""
       },
+      "bundleParent": "End Task Enable",
       "id": "e828adda-bf38-4cc4-8b3c-0aa8a5c55a5d"
     },
     {
-      "displayName": "Eraser",
+      "displayName": "eraser",
       "sourceAppName": "eraser",
       "publisher": "Heidi",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Eraser\"; fileOrFolderName=\"Eraser.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Eraser",
       "id": "17ae8a0f-fe60-4fde-bf6f-0d546ee65318"
     },
     {
       "displayName": "Figma Agent",
       "sourceAppName": "Figma Agent",
       "publisher": "Figma, Inc.",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -1191,20 +1609,23 @@
       }
     },
     {
-      "displayName": "FileZilla (x64)",
+      "displayName": "FileZilla",
       "sourceAppName": "FileZilla",
       "publisher": "Tim Kosse",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"%ProgramFiles%\\\\FileZilla FTP Client\"; fileOrFolderName=\"filezilla.exe\"; check32BitOn64System=false; operationType=\"appVersion\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"3.69.1.0\""
       },
+      "bundleParent": "FileZilla (x64)",
       "id": "26aaa3ad-4fb1-46cc-bbce-ac75b0446f45"
     },
     {
@@ -1213,7 +1634,8 @@
       "publisher": "Mozilla",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT VJC3 Test",
           "intent": "required",
@@ -1228,15 +1650,11 @@
           "name": "MEM GT C3S Device",
           "intent": "required",
           "type": "device"
-        },
-        {
-          "name": "MEM GT VJC Device",
-          "intent": "available",
-          "type": "device"
         }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -1246,144 +1664,121 @@
       "id": "c3f3f084-b578-429a-8755-f1ce8a10c427"
     },
     {
-      "displayName": "FortiClient",
+      "displayName": "forticlient",
       "sourceAppName": "forticlient",
       "publisher": "Fortinet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Fortinet\\\\\"; fileOrFolderName=\"FortiClient\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "FortiClient",
       "id": "5c4ac833-8333-4694-958a-7d3911928f20"
     },
     {
-      "displayName": "Game Bar",
+      "displayName": "game bar",
       "sourceAppName": "game bar",
       "publisher": "Microsoft Corporation",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        {
-          "name": "MEM GT CORP Device",
-          "intent": "excluded",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT VJCtest Device",
-          "intent": "excluded",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT HOTest Device",
-          "intent": "excluded",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT DCORP Device",
-          "intent": "excluded",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT VJC Device",
-          "intent": "excluded",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT ECORP Device",
-          "intent": "excluded",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT VJC3 Device",
-          "intent": "excluded",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT C3S Device",
-          "intent": "excluded",
-          "type": "device"
-        }
-      ],
+      "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Platform-managed detection",
         "method": "platform_managed",
         "rules": [],
         "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"9NZKPSTSNW4P\""
       },
+      "bundleParent": "Game Bar",
       "id": "4b9f10a0-4c6e-4204-ab19-f06f8d4bf334"
     },
     {
-      "displayName": "Genesys Background Assistant 1.6.414; Genesys Cloud; Genesys Cloud 2.40.811; Genesys Cloud Windows 2.47.870; Genesys Repair Step 1; Genesys Repair Step 2",
+      "displayName": "Genesys",
       "sourceAppName": "Genesys",
       "publisher": "Genesys Cloud Services Inc.",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
         "rules": [],
         "rule": ""
-      }
+      },
+      "bundleParent": "Genesys Background Assistant 1.6.414; Genesys Cloud; Genesys Cloud 2.40.811; Genesys Cloud Windows 2.47.870; Genesys Repair Step 1; Genesys Repair Step 2"
     },
     {
-      "displayName": "Genesys Cloud; Genesys Cloud 2.40.811; Genesys Cloud Windows 2.47.870",
+      "displayName": "GenesysCloud",
       "sourceAppName": "GenesysCloud",
       "publisher": "Genesys Inc.",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
         "rules": [],
         "rule": ""
-      }
+      },
+      "bundleParent": "Genesys Cloud; Genesys Cloud 2.40.811; Genesys Cloud Windows 2.47.870"
     },
     {
-      "displayName": "Genetec Security Desk Client 5.13.3.0",
+      "displayName": "Genetec Security Center",
       "sourceAppName": "Genetec Security Center",
       "publisher": "Genetec Inc.",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\Genetec Security Center 5.13\"; fileOrFolderName=\"SecurityDesk.exe\"; check32BitOn64System=true; operationType=\"version\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"5.13.3132.18\""
       },
+      "bundleParent": "Genetec Security Desk Client 5.13.3.0",
       "id": "0f918d85-7e12-4610-a7e7-708977e01f88"
     },
     {
-      "displayName": "Getty Images",
+      "displayName": "getty images",
       "sourceAppName": "getty images",
       "publisher": "Getty Images",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Getty Images",
       "id": "001539f0-dde8-4a24-9c9f-4e6d596f0d80"
     },
     {
@@ -1393,8 +1788,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -1407,11 +1804,13 @@
       "displayName": "GitHub Copilot",
       "sourceAppName": "GitHub Copilot",
       "publisher": "GitHub Inc.",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -1423,11 +1822,13 @@
       "displayName": "GitHub Desktop",
       "sourceAppName": "GitHub Desktop",
       "publisher": "GitHub, Inc.",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -1436,12 +1837,13 @@
       }
     },
     {
-      "displayName": "Global Protect Client",
+      "displayName": "GlobalProtect",
       "sourceAppName": "GlobalProtect",
       "publisher": "Palo Alto",
       "category": "Baseline",
       "installationType": "required",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT JBTest",
           "intent": "required",
@@ -1460,67 +1862,46 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Palo Alto Networks\\\\GlobalProtect\"; fileOrFolderName=\"PanGPA.exe\"; check32BitOn64System=false; operationType=\"version\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"6.3.2.525\""
       },
+      "bundleParent": "Global Protect Client",
       "id": "518d3c76-f6b6-4f9d-bb56-ee1d00fd3b37"
     },
     {
-      "displayName": "Globes - Solar Credit Repair",
-      "sourceAppName": "CreditShortCut",
-      "publisher": "Signet",
-      "category": "Other",
-      "installationType": "required",
-      "entraGroups": [
-        {
-          "name": "MEM GT C3S Device",
-          "intent": "required",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT VJC3 Device",
-          "intent": "available",
-          "type": "device"
-        }
-      ],
-      "isPrerequisite": false,
-      "coreAppDependency": null,
-      "detection": {
-        "status": "Configured rules",
-        "method": "intune_rules",
-        "rules": [],
-        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
-      },
-      "id": "3db9aa97-948f-47da-9e23-787c5dd3dfa4"
-    },
-    {
-      "displayName": "Grafana Corporate Installer; Grafana_Alloy Update - Pilot",
+      "displayName": "Grafana",
       "sourceAppName": "Grafana",
       "publisher": "Grafana Labs",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
         "rules": [],
         "rule": ""
-      }
+      },
+      "bundleParent": "Grafana Corporate Installer; Grafana_Alloy Update - Pilot"
     },
     {
       "displayName": "Greenshot",
       "sourceAppName": "Greenshot",
       "publisher": "Greenshot",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -1529,29 +1910,33 @@
       }
     },
     {
-      "displayName": "HP Debloat",
+      "displayName": "hp debloat",
       "sourceAppName": "hp debloat",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "HP Debloat",
       "id": "2da53b3e-6a78-48a2-a876-6df723a9ade5"
     },
     {
-      "displayName": "IDIS+ Center",
-      "sourceAppName": "idis+ center",
-      "publisher": "IDIS Global",
+      "displayName": "IDIS Center",
+      "sourceAppName": "IDIS Center",
+      "publisher": "IDIS Co., Ltd.",
       "category": "Other",
-      "installationType": "available",
-      "entraGroups": [
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT SMCD",
           "intent": "required",
@@ -1560,44 +1945,70 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\IDIS Center\\\\Client\"; fileOrFolderName=\"G2Client.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "IDIS+ Center",
       "id": "c678edec-0d60-4002-931c-c257f027ec09"
     },
     {
-      "displayName": "IMS DBSelect",
-      "sourceAppName": "ims dbselect",
-      "publisher": "Signet Jewelers IT",
+      "displayName": "idis+ center",
+      "sourceAppName": "idis+ center",
+      "publisher": "IDIS Global",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
-          "name": "MEM GT IT Device",
-          "intent": "available",
+          "name": "MEM GT SMCD",
+          "intent": "required",
           "type": "device"
         }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\IDIS Center\\\\Client\"; fileOrFolderName=\"G2Client.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "bundleParent": "IDIS+ Center",
+      "id": "c678edec-0d60-4002-931c-c257f027ec09"
+    },
+    {
+      "displayName": "ims dbselect",
+      "sourceAppName": "ims dbselect",
+      "publisher": "Signet Jewelers IT",
+      "category": "Other",
+      "installationType": "available",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"DBSelect.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "IMS DBSelect",
       "id": "24ac8ab6-1801-4f28-8efa-cc264b0d3956"
     },
     {
-      "displayName": "IMS Deployment",
+      "displayName": "ims deployment",
       "sourceAppName": "ims deployment",
       "publisher": "Signet Jewelers IT",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT C3S Device",
           "intent": "required",
@@ -1632,113 +2043,91 @@
           "name": "MEM GT DIRM Device",
           "intent": "required",
           "type": "device"
-        },
-        {
-          "name": "MEM GT DCRTL Device",
-          "intent": "available",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT MRCH Device",
-          "intent": "available",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT SST Device",
-          "intent": "available",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT MKTG Device",
-          "intent": "available",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT ACCT Device",
-          "intent": "available",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT IT Device",
-          "intent": "available",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT CORP Device",
-          "intent": "available",
-          "type": "device"
         }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "IMS Deployment",
       "id": "8c85e216-8c18-4b5c-ab15-dcdfcc2d2d47"
     },
     {
-      "displayName": "IMS FONT (System Wide)",
+      "displayName": "ims font (system wide)",
       "sourceAppName": "ims font (system wide)",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"Computer\\\\HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Fonts\"; valueName=\"MS Sans Serif 8,10,12,14,18,24\"; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=\"\"\nwin32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"Computer\\\\HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Fonts\"; valueName=\"MS Sans Serif 8,10,12,14,18,24 (120)\"; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=\"\""
       },
+      "bundleParent": "IMS FONT (System Wide)",
       "id": "48c3a6be-ea02-4ab4-8bd6-1b7f0d3e24a4"
     },
     {
-      "displayName": "IMS SKU Service DLL",
+      "displayName": "ims sku service dll",
       "sourceAppName": "ims sku service dll",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\IMS\\\\SkuService\\\\\"; fileOrFolderName=\"Signet.SkuService.ComAdapter.dll\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2024-06-14T12:49:00.000Z\""
       },
+      "bundleParent": "IMS SKU Service DLL",
       "id": "b4cc9e3c-0084-48c0-8ebb-3aa47925939e"
     },
     {
-      "displayName": "IMS Web",
+      "displayName": "ims web",
       "sourceAppName": "ims web",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "IMS Web",
       "id": "23676bee-d0d3-47f1-b9e2-681e5491fd53"
     },
     {
       "displayName": "Informatica Client",
       "sourceAppName": "Informatica Client",
       "publisher": "Informatica LLC",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -1747,31 +2136,36 @@
       }
     },
     {
-      "displayName": "Install KB5072653",
+      "displayName": "install kb5072653",
       "sourceAppName": "install kb5072653",
       "publisher": "Microsoft",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "Install KB5072653",
       "id": "af93878f-5128-40c1-99f1-c37a643fcf98"
     },
     {
       "displayName": "iVMS-4200",
       "sourceAppName": "iVMS-4200",
       "publisher": "Hangzhou Hikvision Digital Technology Co., Ltd.",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -1780,46 +2174,53 @@
       }
     },
     {
-      "displayName": "Jared Talent Journey2",
+      "displayName": "jared talent journey2",
       "sourceAppName": "jared talent journey2",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Jared Talent Journey2",
       "id": "b68c0160-33d0-4663-b92f-a1a36a757f71"
     },
     {
-      "displayName": "Jared.com",
+      "displayName": "jared.com",
       "sourceAppName": "jared.com",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Jared.com",
       "id": "753ecbc4-d702-471f-ab76-7ed18033d2a0"
     },
     {
-      "displayName": "JBTest Autopilot-popup.ps1",
+      "displayName": "jbtest autopilot-popup.ps1",
       "sourceAppName": "jbtest autopilot-popup.ps1",
       "publisher": "ADM-JBREWER",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT JBTest",
           "intent": "required",
@@ -1828,21 +2229,24 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\autopilot\"; fileOrFolderName=\"Popup.ps1\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "JBTest Autopilot-popup.ps1",
       "id": "031958be-829b-4fb6-883c-3001881e43c9"
     },
     {
-      "displayName": "JBTest DotNet",
+      "displayName": "jbtest dotnet",
       "sourceAppName": "jbtest dotnet",
       "publisher": "Microsoft",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT JBTest",
           "intent": "required",
@@ -1851,21 +2255,24 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\.NETFramework\\\\v3.0\"; valueName=null; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=\"\""
       },
+      "bundleParent": "JBTest DotNet",
       "id": "1890b45c-7d94-4741-b937-9bde0390279f"
     },
     {
-      "displayName": "JBTest ESP Reboot",
+      "displayName": "jbtest esp reboot",
       "sourceAppName": "jbtest esp reboot",
       "publisher": "ADM-JBREWER",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT JBTest",
           "intent": "required",
@@ -1874,21 +2281,24 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\autopilot\"; fileOrFolderName=\"Reboot.txt\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "JBTest ESP Reboot",
       "id": "cf73e312-f52b-4ea9-8505-d98ee6c6dd77"
     },
     {
-      "displayName": "JBTest InstallWallpapers.ps1",
+      "displayName": "jbtest installwallpapers.ps1",
       "sourceAppName": "jbtest installwallpapers.ps1",
       "publisher": "Microsoft",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT JBTest",
           "intent": "required",
@@ -1897,21 +2307,24 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Autopilot\"; fileOrFolderName=\"SetWallpaper.ps1\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "JBTest InstallWallpapers.ps1",
       "id": "495b979a-68b2-41d1-bb4c-f75483575b66"
     },
     {
-      "displayName": "JBTest set-m365link.ps1",
+      "displayName": "jbtest set-m365link.ps1",
       "sourceAppName": "jbtest set-m365link.ps1",
       "publisher": "ADM-JBREWER",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT JBTest",
           "intent": "required",
@@ -1920,21 +2333,24 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"Microsoft Online.lnk\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "JBTest set-m365link.ps1",
       "id": "66f143d1-9256-40bd-8807-f6d2c54428a5"
     },
     {
-      "displayName": "JBTest Taskbar.ps1",
+      "displayName": "jbtest taskbar.ps1",
       "sourceAppName": "jbtest taskbar.ps1",
       "publisher": "ADM-JBREWER",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT JBTest",
           "intent": "required",
@@ -1943,66 +2359,64 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\autopilot\"; fileOrFolderName=\"Pins.txt\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "JBTest Taskbar.ps1",
       "id": "aab296f8-d34c-4e5f-91fe-414d3e4eb813"
     },
     {
-      "displayName": "JEWELS Wifi",
+      "displayName": "jewels wifi",
       "sourceAppName": "jewels wifi",
       "publisher": "Signet jewelers",
       "category": "Baseline",
       "installationType": "available",
-      "entraGroups": [
-        {
-          "name": "MEM GT Canada Device",
-          "intent": "excluded",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT DCRTL Device",
-          "intent": "excluded",
-          "type": "device"
-        }
-      ],
+      "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "JEWELS Wifi",
       "id": "99fbdc3e-7b03-47ef-bac0-bb2d7672dc93"
     },
     {
-      "displayName": "KAY.com",
+      "displayName": "kay.com",
       "sourceAppName": "kay.com",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "KAY.com",
       "id": "dedc6c01-c171-4426-9989-dde1d32f5834"
     },
     {
-      "displayName": "Kiosk Browser",
+      "displayName": "kiosk browser",
       "sourceAppName": "kiosk browser",
       "publisher": "Microsoft Corporation",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT KIOSK-SSPR",
           "intent": "required",
@@ -2011,46 +2425,54 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Platform-managed detection",
         "method": "platform_managed",
         "rules": [],
         "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"9NGB5S5XG2KP\""
       },
+      "bundleParent": "Kiosk Browser",
       "id": "f5eeed0e-b989-47b8-ad8a-15b4c81ef68d"
     },
     {
-      "displayName": "Lawson",
+      "displayName": "lawson",
       "sourceAppName": "lawson",
       "publisher": "Signet Jewelers IT",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"Lawson901.lnk\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Lawson",
       "id": "4792363e-d0ea-414e-b53a-a4ba160332d8"
     },
     {
-      "displayName": "Live Person",
+      "displayName": "live person",
       "sourceAppName": "live person",
       "publisher": "Live Person",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Live Person",
       "id": "a9cb37f4-4e1c-4c43-ab2f-7011303ee0db"
     },
     {
@@ -2059,7 +2481,8 @@
       "publisher": "Logitech",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT VJCtest Device",
           "intent": "required",
@@ -2083,6 +2506,7 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -2092,14 +2516,57 @@
       "id": "3e487427-b20a-4e9f-8c3f-33b27566355b"
     },
     {
+      "displayName": "Logi Tune 2.1.24",
+      "sourceAppName": "Logi Tune 2.1.24",
+      "publisher": "Logitech",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [
+        {
+          "name": "MEM GT VJCtest Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Test",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\Logitech\\\\LogiTune\"; fileOrFolderName=\"LogiTune.exe\"; check32BitOn64System=true; operationType=\"version\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2.1.24.0\""
+      },
+      "bundleParent": "Logi Tune",
+      "id": "3e487427-b20a-4e9f-8c3f-33b27566355b"
+    },
+    {
       "displayName": "microsoft .net sdk 8.0.426 (x64)",
       "sourceAppName": "microsoft .net sdk 8.0.426 (x64)",
       "publisher": "Microsoft Corporation",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -2108,20 +2575,23 @@
       }
     },
     {
-      "displayName": "Microsoft 365 32bit; Microsoft 365 64bit; Microsoft 365 Copilot; Microsoft 365 Dell HomePrem; Microsoft 365 Project; Microsoft 365 Visio",
+      "displayName": "Microsoft 365",
       "sourceAppName": "Microsoft 365",
       "publisher": "Microsoft Corporation",
       "category": "Baseline",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
         "rules": [],
         "rule": ""
-      }
+      },
+      "bundleParent": "Microsoft 365 32bit; Microsoft 365 64bit; Microsoft 365 Copilot; Microsoft 365 Dell HomePrem; Microsoft 365 Project; Microsoft 365 Visio"
     },
     {
       "displayName": "Microsoft Build of OpenJDK with Hotspot 17.0.7+7 (x64)",
@@ -2130,8 +2600,10 @@
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured MSI identity",
         "method": "msi",
@@ -2144,11 +2616,13 @@
       "displayName": "Microsoft SQL Server",
       "sourceAppName": "Microsoft SQL Server",
       "publisher": "Microsoft Corporation",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -2160,11 +2634,13 @@
       "displayName": "Microsoft SQL Server Management Studio",
       "sourceAppName": "Microsoft SQL Server Management Studio",
       "publisher": "Microsoft Corporation",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -2176,11 +2652,13 @@
       "displayName": "Microsoft.Winget.Platform.Source",
       "sourceAppName": "Microsoft.Winget.Platform.Source",
       "publisher": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -2195,8 +2673,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -2206,29 +2686,111 @@
       "id": "d8a685cc-2dfd-4742-8a05-befe31db11d9"
     },
     {
-      "displayName": "Nexus Pilot",
+      "displayName": "Monarch",
+      "sourceAppName": "Monarch",
+      "publisher": "Datawatch Corporation",
+      "category": "Other",
+      "installationType": "available",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Not tracked",
+        "method": "not_configured",
+        "rules": [],
+        "rule": ""
+      }
+    },
+    {
+      "displayName": "MOVE - Canada",
+      "sourceAppName": "MOVE - Canada",
+      "publisher": "Signet",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"ELVIS PROD.lnk\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2024-06-27T04:00:00.000Z\""
+      },
+      "bundleParent": "C1Links",
+      "id": "daf3016a-f9de-49c0-a579-91021cc37071"
+    },
+    {
+      "displayName": "MOVE - WMS - SSC DC",
+      "sourceAppName": "MOVE - WMS - SSC DC",
+      "publisher": "Signet",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"ELVIS PROD.lnk\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2024-06-27T04:00:00.000Z\""
+      },
+      "bundleParent": "C1Links",
+      "id": "daf3016a-f9de-49c0-a579-91021cc37071"
+    },
+    {
+      "displayName": "MRPC Move",
+      "sourceAppName": "MRPC Move",
+      "publisher": "Signet",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"ELVIS PROD.lnk\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2024-06-27T04:00:00.000Z\""
+      },
+      "bundleParent": "C1Links",
+      "id": "daf3016a-f9de-49c0-a579-91021cc37071"
+    },
+    {
+      "displayName": "nexus pilot",
       "sourceAppName": "nexus pilot",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Nexus Pilot",
       "id": "0b3d5e9f-addf-4e81-94a3-2c5d9f90b74c"
     },
     {
-      "displayName": "NiCE Screen Agent",
-      "sourceAppName": "nice screen agent",
+      "displayName": "nice agent workspace",
+      "sourceAppName": "nice agent workspace",
       "publisher": "NiCE",
       "category": "Other",
-      "installationType": "available",
-      "entraGroups": [
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT VJCtest Device",
           "intent": "required",
@@ -2257,29 +2819,80 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "NiCE Screen Agent",
       "id": "42ff5a4e-1daa-441c-8513-40eed8acb582"
     },
     {
-      "displayName": "NinjaOne Agent; STS - NinjaOne Agent",
+      "displayName": "nice screen agent",
+      "sourceAppName": "nice screen agent",
+      "publisher": "NiCE",
+      "category": "Other",
+      "installationType": "available",
+      "entraGroups": [],
+      "targetGroups": [
+        {
+          "name": "MEM GT VJCtest Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC3 Test",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT VJC Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "bundleParent": "NiCE Screen Agent",
+      "id": "42ff5a4e-1daa-441c-8513-40eed8acb582"
+    },
+    {
+      "displayName": "NinjaOne",
       "sourceAppName": "NinjaOne",
       "publisher": "NinjaRMM LLC",
       "category": "Baseline",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
         "rules": [],
         "rule": ""
-      }
+      },
+      "bundleParent": "NinjaOne Agent; STS - NinjaOne Agent"
     },
     {
       "displayName": "Notepad++",
@@ -2288,8 +2901,10 @@
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -2305,8 +2920,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -2316,88 +2933,123 @@
       "id": "f0708925-41aa-48ff-9285-d83eaefb18b1"
     },
     {
-      "displayName": "Oracle 11g 32-bit",
+      "displayName": "oracle 11g 32-bit",
       "sourceAppName": "oracle 11g 32-bit",
       "publisher": "Oracle",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Oracle\\\\product\\\\11.2.0\"; fileOrFolderName=\"client_2\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Oracle 11g 32-bit",
       "id": "854f2a05-3a14-4d9b-a2c3-6e560e976691"
     },
     {
-      "displayName": "Oracle 11g 64-bit",
+      "displayName": "oracle 11g 64-bit",
       "sourceAppName": "oracle 11g 64-bit",
       "publisher": "Oracle",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Oracle\\\\product\\\\11.2.0\"; fileOrFolderName=\"client_1\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Oracle 11g 64-bit",
       "id": "f4d5c913-be0f-431c-9f53-76e96df82322"
     },
     {
-      "displayName": "Outlook Web",
+      "displayName": "outlook web",
       "sourceAppName": "outlook web",
       "publisher": "Microsoft",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Outlook Web",
       "id": "2c0ca34a-db09-4627-9cbb-539976d672aa"
     },
     {
-      "displayName": "PL\\SQL Developer 12.0.2",
+      "displayName": "PL-SQL Developer",
       "sourceAppName": "PL-SQL Developer",
       "publisher": "Allround Automations",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\PLSQL Developer 12\"; fileOrFolderName=\"plsqldev.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "PL\\SQL Developer 12.0.2",
       "id": "b253b06a-67e8-4d55-8fec-d984288de76f"
     },
     {
-      "displayName": "Plex - Web Link",
+      "displayName": "pl\\sql developer 12.0.2",
+      "sourceAppName": "pl\\sql developer 12.0.2",
+      "publisher": "Allround Automations",
+      "category": "Other",
+      "installationType": "available",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\PLSQL Developer 12\"; fileOrFolderName=\"plsqldev.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "bundleParent": "PL\\SQL Developer 12.0.2",
+      "id": "b253b06a-67e8-4d55-8fec-d984288de76f"
+    },
+    {
+      "displayName": "plex - web link",
       "sourceAppName": "plex - web link",
       "publisher": "Plex",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Plex - Web Link",
       "id": "c465644a-73a1-4df4-a4ea-fece9c7f33a3"
     },
     {
@@ -2406,7 +3058,8 @@
       "publisher": "Plex",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT SMA Device",
           "intent": "required",
@@ -2415,6 +3068,7 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -2424,21 +3078,24 @@
       "id": "8bb31481-a317-4af0-8546-865f4f7973b7"
     },
     {
-      "displayName": "PMAgents_12_0_5290.exe",
-      "sourceAppName": "Privilege Manager Agents",
-      "publisher": "Thycotic",
-      "category": "Baseline",
+      "displayName": "PLSQL Developer",
+      "sourceAppName": "PLSQL Developer",
+      "publisher": "Allround Automations",
+      "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
-        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\PLSQL Developer 12\"; fileOrFolderName=\"plsqldev.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
-      "id": "5922b413-1960-4d98-832b-3e1176410290"
+      "bundleParent": "PL\\SQL Developer 12.0.2",
+      "id": "b253b06a-67e8-4d55-8fec-d984288de76f"
     },
     {
       "displayName": "Poly Lens Desktop",
@@ -2446,7 +3103,8 @@
       "publisher": "HP",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT C3S Device",
           "intent": "required",
@@ -2455,6 +3113,7 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -2467,11 +3126,13 @@
       "displayName": "Poly Studio",
       "sourceAppName": "Poly Studio",
       "publisher": "HP Inc.",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -2483,11 +3144,13 @@
       "displayName": "PostgreSQL",
       "sourceAppName": "PostgreSQL",
       "publisher": "PostgreSQL Global Development Group",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -2499,11 +3162,13 @@
       "displayName": "Postman",
       "sourceAppName": "Postman",
       "publisher": "Postman",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -2512,34 +3177,33 @@
       }
     },
     {
-      "displayName": "Powtoon",
+      "displayName": "powtoon",
       "sourceAppName": "powtoon",
       "publisher": "Powtoon",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Powtoon",
       "id": "d300bb89-06e1-4bac-96d0-b9e47386816f"
     },
     {
-      "displayName": "PrinterLogic Client",
-      "sourceAppName": "printerlogic client",
+      "displayName": "Printer Installer Client",
+      "sourceAppName": "Printer Installer Client",
       "publisher": "Vasion",
       "category": "Other",
-      "installationType": "available",
-      "entraGroups": [
-        {
-          "name": "MEM GT ALPHA",
-          "intent": "excluded",
-          "type": "device"
-        },
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT DCORP Device",
           "intent": "required",
@@ -2558,13 +3222,71 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppProductCodeRule: productCode=\"{A9DE0858-9DDD-4E1B-B041-C2AA90DCBF74}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
       },
+      "bundleParent": "PrinterLogic Client",
       "id": "4d8f8177-820c-4b17-baf4-6fa8324d58b4"
+    },
+    {
+      "displayName": "printerlogic client",
+      "sourceAppName": "printerlogic client",
+      "publisher": "Vasion",
+      "category": "Other",
+      "installationType": "available",
+      "entraGroups": [],
+      "targetGroups": [
+        {
+          "name": "MEM GT DCORP Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT CORP Device",
+          "intent": "required",
+          "type": "device"
+        },
+        {
+          "name": "MEM GT C3S Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppProductCodeRule: productCode=\"{A9DE0858-9DDD-4E1B-B041-C2AA90DCBF74}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
+      },
+      "bundleParent": "PrinterLogic Client",
+      "id": "4d8f8177-820c-4b17-baf4-6fa8324d58b4"
+    },
+    {
+      "displayName": "Privilege Manager Agents",
+      "sourceAppName": "Privilege Manager Agents",
+      "publisher": "Thycotic",
+      "category": "Baseline",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "bundleParent": "PMAgents_12_0_5290.exe",
+      "id": "5922b413-1960-4d98-832b-3e1176410290"
     },
     {
       "displayName": "PuTTY",
@@ -2573,8 +3295,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -2584,37 +3308,43 @@
       "id": "da009a79-b416-4179-9be8-7e71c0868fda"
     },
     {
-      "displayName": "Python 3.13",
+      "displayName": "Python",
       "sourceAppName": "Python",
       "publisher": "CN=4975D53F-AA7E-49A5-8B49-EA4FDC1BB66B",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Platform-managed detection",
         "method": "platform_managed",
         "rules": [],
         "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"9PNRBTZXMB4Z\""
       },
+      "bundleParent": "Python 3.13",
       "id": "0578b931-7b5f-4dea-bd48-57331f296847"
     },
     {
-      "displayName": "QR Code Scanner",
+      "displayName": "qr code scanner",
       "sourceAppName": "qr code scanner",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "QR Code Scanner",
       "id": "c8d00f8d-ae6b-4439-8cea-2f5e86838c26"
     },
     {
@@ -2624,8 +3354,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -2640,8 +3372,10 @@
       "category": "Baseline",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -2650,153 +3384,193 @@
       }
     },
     {
-      "displayName": "RealVNC Viewer",
+      "displayName": "realvnc viewer",
       "sourceAppName": "realvnc viewer",
       "publisher": "RealVNC",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\RealVNC\\\\VNC Viewer\"; fileOrFolderName=\"vncviewer.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "RealVNC Viewer",
       "id": "16c7abea-317b-4d3c-a438-4170793fb06b"
     },
     {
-      "displayName": "Repair 2.0",
+      "displayName": "repair 2.0",
       "sourceAppName": "repair 2.0",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Repair 2.0",
       "id": "56cabeb3-318e-4db0-befd-056bc6d68ac8"
     },
     {
-      "displayName": "Repair Inquiry",
+      "displayName": "repair inquiry",
       "sourceAppName": "repair inquiry",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Repair Inquiry",
       "id": "663306d4-ef7b-4fd0-b036-ade9624d53bf"
     },
     {
-      "displayName": "Reprintinstall.bat",
+      "displayName": "reprintinstall.bat",
       "sourceAppName": "reprintinstall.bat",
       "publisher": "Oracle",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\xstore_v17\\\\zale_config\"; fileOrFolderName=\"selector_v17.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Reprintinstall.bat",
       "id": "bfe9e2f1-40b8-458c-a439-8b5c100060fe"
     },
     {
-      "displayName": "Reset Update Policy Manager",
+      "displayName": "reset update policy manager",
       "sourceAppName": "reset update policy manager",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "Reset Update Policy Manager",
       "id": "57bdcf69-01b9-4490-b79b-0f445ef213dc"
     },
     {
-      "displayName": "RMS Install",
+      "displayName": "rms install",
       "sourceAppName": "rms install",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\IcedTeaWeb\\\\WebStart\\\\bin\\\\\"; fileOrFolderName=\"javaws.exe\"; check32BitOn64System=true; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "RMS Install",
       "id": "89fe69c2-0a21-4630-864c-6f6a81690bf1"
     },
     {
-      "displayName": "RMS Repair",
+      "displayName": "rms repair",
       "sourceAppName": "rms repair",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
       },
+      "bundleParent": "RMS Repair",
       "id": "a217a8b2-1a88-4fbe-8b0a-312d9f43d382"
     },
     {
-      "displayName": "RMSBatch File Copy",
+      "displayName": "rmsbatch file copy",
       "sourceAppName": "rmsbatch file copy",
       "publisher": "Signet jewelers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"RMSbatch\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "RMSBatch File Copy",
       "id": "263cf015-eea6-46d4-b056-48c5e819a2f2"
     },
     {
-      "displayName": "SAP GUI",
+      "displayName": "sap add-in",
+      "sourceAppName": "sap add-in",
+      "publisher": "SAP",
+      "category": "Other",
+      "installationType": "available",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppFileSystemRule: path=\"c:\\\\temp\\\\mem\"; fileOrFolderName=\"SAPaddinsdetect.txt\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "bundleParent": "**Sap Addins",
+      "id": "c8cc4672-fa65-4de7-9dff-c72e102bf5d6"
+    },
+    {
+      "displayName": "sap gui",
       "sourceAppName": "sap gui",
       "publisher": "SAP",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
-        {
-          "name": "MEM GT EXEC",
-          "intent": "excluded",
-          "type": "device"
-        },
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT C3S Device",
           "intent": "required",
@@ -2810,23 +3584,27 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppRegistryRule: check32BitOn64System=true; keyPath=\"Computer\\\\HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\WOW6432Node\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall\\\\SAPGUI\"; valueName=\"DisplayName\"; operationType=\"string\"; operator=\"equal\"; comparisonValue=\"SAP GUI for Windows 8.00 32bit  (Patch 11)\""
       },
+      "bundleParent": "SAP GUI",
       "id": "e80df116-ef8c-4292-88a6-d9f7dfaf797d"
     },
     {
       "displayName": "SAP HANA Studio 64bit",
       "sourceAppName": "SAP HANA Studio 64bit",
       "publisher": "SAP SE",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -2835,29 +3613,33 @@
       }
     },
     {
-      "displayName": "Segoma",
+      "displayName": "segoma",
       "sourceAppName": "segoma",
       "publisher": "Segoma",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Segoma",
       "id": "b1f85697-e5d8-4dab-86d9-8a54a532fdc0"
     },
     {
-      "displayName": "SentinelOne",
+      "displayName": "Sentinel Agent",
       "sourceAppName": "Sentinel Agent",
       "publisher": "Sentinel One",
       "category": "Baseline",
       "installationType": "required",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT SMCD",
           "intent": "required",
@@ -2866,91 +3648,151 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\\"; fileOrFolderName=\"SentinelOne\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "SentinelOne",
       "id": "45d7d46e-e7cf-4eb1-8776-08101b0f1eea"
     },
     {
-      "displayName": "Signage Ordering Website",
+      "displayName": "sentinelone",
+      "sourceAppName": "sentinelone",
+      "publisher": "Sentinel One",
+      "category": "Baseline",
+      "installationType": "available",
+      "entraGroups": [],
+      "targetGroups": [
+        {
+          "name": "MEM GT SMCD",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\\"; fileOrFolderName=\"SentinelOne\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "bundleParent": "SentinelOne",
+      "id": "45d7d46e-e7cf-4eb1-8776-08101b0f1eea"
+    },
+    {
+      "displayName": "signage ordering website",
       "sourceAppName": "signage ordering website",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Signage Ordering Website",
       "id": "a97dcad2-1586-4f68-b105-0242e034768c"
     },
     {
-      "displayName": "SIGnet",
+      "displayName": "signet",
       "sourceAppName": "signet",
       "publisher": "Signet Jewelwers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "SIGnet",
       "id": "118e2a4c-535c-4256-81bd-dcf49d2b57d8"
     },
     {
-      "displayName": "Signet Font Update",
+      "displayName": "signet font update",
       "sourceAppName": "signet font update",
       "publisher": "Signet",
       "category": "Baseline",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Fonts\"; valueName=\"Figtree-Regular (TrueType)\"; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=\"\""
       },
+      "bundleParent": "Signet Font Update",
       "id": "fa9d2b5c-7f91-4764-a516-6118c12a6935"
     },
     {
-      "displayName": "Signet Shipping Handheld",
+      "displayName": "signet shipping handheld",
       "sourceAppName": "signet shipping handheld",
       "publisher": "SSI",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Signet Shipping Handheld",
       "id": "2869a08d-524b-4eb2-b573-dc6902d1e5af"
     },
     {
       "displayName": "Slack",
       "sourceAppName": "Slack",
       "publisher": "Slack Technologies Inc.",
+      "category": "PendingBuild",
+      "installationType": "available",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Not tracked",
+        "method": "not_configured",
+        "rules": [],
+        "rule": ""
+      }
+    },
+    {
+      "displayName": "Snagit",
+      "sourceAppName": "Snagit",
+      "publisher": "TechSmith Corporation",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -2962,11 +3804,13 @@
       "displayName": "SoapUI",
       "sourceAppName": "SoapUI",
       "publisher": "SmartBear Software",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -2981,8 +3825,10 @@
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -2995,11 +3841,13 @@
       "displayName": "SourceTree",
       "sourceAppName": "SourceTree",
       "publisher": "Atlassian",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -3008,29 +3856,33 @@
       }
     },
     {
-      "displayName": "SSO Password Reset Link",
+      "displayName": "sso password reset link",
       "sourceAppName": "sso password reset link",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "SSO Password Reset Link",
       "id": "b471e452-20d9-48c7-b3ea-5b582466a162"
     },
     {
-      "displayName": "Sterling User Maintenance File Update",
+      "displayName": "sterling user maintenance file update",
       "sourceAppName": "sterling user maintenance file update",
       "publisher": "Sterling Jewelers",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT VJC3 Test",
           "intent": "required",
@@ -3044,111 +3896,123 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Sterling Jewelers Inc\\\\Admin\\\\User Maintenance\"; fileOrFolderName=\"SterlingUserMaint.exe\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2023-05-30T07:00:00.000Z\""
       },
+      "bundleParent": "Sterling User Maintenance File Update",
       "id": "c43d6bf3-0679-434d-800a-66e6731a42b1"
     },
     {
-      "displayName": "Storyline 2",
+      "displayName": "storyline 2",
       "sourceAppName": "storyline 2",
       "publisher": "Articulate",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
-        {
-          "name": "MEM GT LDCORP Device",
-          "intent": "available",
-          "type": "device"
-        }
-      ],
+      "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\Articulate\\\\Articulate Storyline 2\"; fileOrFolderName=\"Storyline.exe\"; check32BitOn64System=true; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Storyline 2",
       "id": "a9bdf8ee-ae16-4224-94aa-643c507e5df1"
     },
     {
-      "displayName": "STS - Epson Printer Driver",
+      "displayName": "sts - epson printer driver",
       "sourceAppName": "sts - epson printer driver",
       "publisher": "Epson",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Windows\\\\System32\\\\drivers\\\\\"; fileOrFolderName=\"TMUSB64.sys\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "STS - Epson Printer Driver",
       "id": "924a1d2d-5574-4b87-998b-5b9702e0c9e0"
     },
     {
-      "displayName": "STS - LAPS",
+      "displayName": "sts - laps",
       "sourceAppName": "sts - laps",
       "publisher": "Microsoft",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured MSI identity",
         "method": "msi",
         "rules": [],
         "rule": "MSI: ProductCode=\"{97E2CA7B-B657-4FF7-A6DB-30ECC73E1E28}\"; ProductVersion=\"6.2.0.0\""
       },
+      "bundleParent": "STS - LAPS",
       "id": "0a063dce-965e-420a-890e-da4c8c2a4c85"
     },
     {
-      "displayName": "Tableau 2024.3; Tableau Prep Builder 2025.3",
+      "displayName": "Tableau",
       "sourceAppName": "Tableau",
       "publisher": "Tableau Software",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
         "rules": [],
         "rule": ""
-      }
+      },
+      "bundleParent": "Tableau 2024.3; Tableau Prep Builder 2025.3"
     },
     {
-      "displayName": "Tableau Prep Builder 2025.3",
+      "displayName": "Tableau Prep Builder",
       "sourceAppName": "Tableau Prep Builder",
       "publisher": "Salesforce, Inc",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Tableau\\\\Tableau Prep Builder 2025.3\"; fileOrFolderName=\"Tableau Prep Builder.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Tableau Prep Builder 2025.3",
       "id": "5812b6de-d2a6-4001-8596-2c760e8c9db8"
     },
     {
-      "displayName": "Teams",
+      "displayName": "teams",
       "sourceAppName": "teams",
       "publisher": "Microsoft",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT JBTest",
           "intent": "required",
@@ -3157,46 +4021,74 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Platform-managed detection",
         "method": "platform_managed",
         "rules": [],
         "rule": "PlatformManaged: Provider=\"Office products\"; Identity=[\"o365ProPlusRetail\"]"
       },
+      "bundleParent": "Teams",
       "id": "0e100456-1710-4165-863f-884d4018e4a5"
     },
     {
-      "displayName": "Toad 12.5",
+      "displayName": "toad 12.5",
       "sourceAppName": "toad 12.5",
       "publisher": "Quest Software",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Quest Software\\\\Toad for Oracle 12.5\"; fileOrFolderName=\"Toad.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Toad 12.5",
       "id": "f7e5b2de-bb1a-4c47-a258-57e505ab3611"
     },
     {
-      "displayName": "Toad 2025 R2",
+      "displayName": "toad 2025 r2",
       "sourceAppName": "toad 2025 r2",
       "publisher": "Quest Software",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Quest Software\\\\Toad for Oracle 2025 R2 Edition\\\\Toad for Oracle 25.2\"; fileOrFolderName=\"Toad.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Toad 2025 R2",
+      "id": "68ed4e85-92dd-4896-8b04-4614321af735"
+    },
+    {
+      "displayName": "Toad for Oracle",
+      "sourceAppName": "Toad for Oracle",
+      "publisher": "Quest Software",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Quest Software\\\\Toad for Oracle 2025 R2 Edition\\\\Toad for Oracle 25.2\"; fileOrFolderName=\"Toad.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "bundleParent": "Toad 2025 R2",
       "id": "68ed4e85-92dd-4896-8b04-4614321af735"
     },
     {
@@ -3205,7 +4097,8 @@
       "publisher": "Star Micronics",
       "category": "Other",
       "installationType": "required",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT SSI Device",
           "intent": "required",
@@ -3219,6 +4112,7 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -3231,11 +4125,13 @@
       "displayName": "UiPath Studio",
       "sourceAppName": "UiPath Studio",
       "publisher": "UiPath",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -3250,8 +4146,10 @@
       "category": "Baseline",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured MSI identity",
         "method": "msi",
@@ -3261,31 +4159,36 @@
       "id": "a306c9de-70a1-4a12-b7b3-465b5e230cd3"
     },
     {
-      "displayName": "Verifone Driver",
+      "displayName": "verifone driver",
       "sourceAppName": "verifone driver",
       "publisher": "Verifone",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppProductCodeRule: productCode=\"{C7BBB812-4B12-4B50-B8C2-57029675A993}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
       },
+      "bundleParent": "Verifone Driver",
       "id": "69c1d5fa-2ae6-4f84-add3-553f0c329b1d"
     },
     {
       "displayName": "VIGIL Client",
       "sourceAppName": "VIGIL Client",
       "publisher": "3xLOGIC Inc.",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -3294,98 +4197,115 @@
       }
     },
     {
-      "displayName": "Visual Studio 2026; Visual Studio Code; Visual Studio for Office 2010 Runtime",
+      "displayName": "Visual Studio",
       "sourceAppName": "Visual Studio",
       "publisher": "Microsoft Corporation",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
         "rules": [],
         "rule": ""
-      }
+      },
+      "bundleParent": "Visual Studio 2026; Visual Studio Code; Visual Studio for Office 2010 Runtime"
     },
     {
-      "displayName": "VixxoLink.com",
+      "displayName": "vixxolink.com",
       "sourceAppName": "vixxolink.com",
       "publisher": "Signet",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "VixxoLink.com",
       "id": "93f58d56-df96-4d09-a29c-90dc1f3f5eb5"
     },
     {
-      "displayName": "VLC Media Player",
+      "displayName": "VLC media player",
       "sourceAppName": "VLC media player",
       "publisher": "VideoLAN",
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\VideoLAN\\\\VLC\"; fileOrFolderName=\"vlc.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "VLC Media Player",
       "id": "e2212264-09f9-4d36-b224-b7b3e09b4910"
     },
     {
-      "displayName": "Waitwhile",
+      "displayName": "waitwhile",
       "sourceAppName": "waitwhile",
       "publisher": "Waitwhile",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Waitwhile",
       "id": "8e9fb2d5-7c16-4b54-884d-a99d054e3ff6"
     },
     {
-      "displayName": "Waitwhile - Login",
+      "displayName": "waitwhile - login",
       "sourceAppName": "waitwhile - login",
       "publisher": "Waitwhile",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Waitwhile - Login",
       "id": "0adee510-fc0f-45fc-8cd0-8ab5950a61b7"
     },
     {
       "displayName": "Windows Subsystem for Linux Update",
       "sourceAppName": "Windows Subsystem for Linux Update",
       "publisher": "Microsoft Corporation",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -3397,11 +4317,13 @@
       "displayName": "WinMerge",
       "sourceAppName": "WinMerge",
       "publisher": "E=winmergejp@gmail.com, CN=Takashi Sawanaka, O=Takashi Sawanaka, S=Chiba, C=JP",
-      "category": "Other",
+      "category": "PendingBuild",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -3416,8 +4338,10 @@
       "category": "Other",
       "installationType": "required",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
@@ -3427,71 +4351,83 @@
       "id": "69c92724-398d-47d0-8e67-018d91c8ce7f"
     },
     {
-      "displayName": "xStore Reprint Utility",
+      "displayName": "xstore reprint utility",
       "sourceAppName": "xstore reprint utility",
       "publisher": "Signet Jewelers IT",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\xstore_v17\\\\zale_config\"; fileOrFolderName=\"selector_v17.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "xStore Reprint Utility",
       "id": "d58a04ff-3c6d-4c50-8457-c45d9570a1fd"
     },
     {
-      "displayName": "Zales Images",
+      "displayName": "zales images",
       "sourceAppName": "zales images",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Zales Images",
       "id": "14c532ae-858f-4cfc-b6b6-3c97791f5129"
     },
     {
-      "displayName": "Zales Repair",
+      "displayName": "zales repair",
       "sourceAppName": "zales repair",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Zales Repair",
       "id": "38290fa7-6e82-4cf3-a2c3-e094b2dba34f"
     },
     {
-      "displayName": "Zales.com",
+      "displayName": "zales.com",
       "sourceAppName": "zales.com",
       "publisher": "Signet Jewelers",
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not applicable - web link",
         "method": "not_applicable",
         "rules": [],
         "rule": "Not applicable - web link"
       },
+      "bundleParent": "Zales.com",
       "id": "18a4c008-0926-48c8-b7dc-6964cd851996"
     },
     {
@@ -3501,8 +4437,10 @@
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -3511,12 +4449,13 @@
       }
     },
     {
-      "displayName": "Zebra Designer 3",
+      "displayName": "zebra designer 3",
       "sourceAppName": "zebra designer 3",
       "publisher": "Zebra",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT SMA Device",
           "intent": "required",
@@ -3525,21 +4464,24 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Zebra Technologies\\\\ZebraDesigner 3\\\\bin.net\"; fileOrFolderName=\"ZebraDesigner.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Zebra Designer 3",
       "id": "62e7bf3a-1d37-44e6-acab-5d5eaa363a8f"
     },
     {
-      "displayName": "Zebra Printer Setup Utilities",
+      "displayName": "zebra printer setup utilities",
       "sourceAppName": "zebra printer setup utilities",
       "publisher": "Zebra, Inc.",
       "category": "Other",
       "installationType": "available",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT DCORP Device",
           "intent": "required",
@@ -3554,41 +4496,18 @@
           "name": "MEM GT DIRM Device",
           "intent": "required",
           "type": "device"
-        },
-        {
-          "name": "MEM GT DCRTL Device",
-          "intent": "available",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT Canada Device",
-          "intent": "available",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT SSI Device",
-          "intent": "available",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT SST Device",
-          "intent": "available",
-          "type": "device"
-        },
-        {
-          "name": "MEM GT SSW Device",
-          "intent": "available",
-          "type": "device"
         }
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
         "rules": [],
         "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\Zebra Technologies\\\\Zebra Setup Utilities\\\\App\"; fileOrFolderName=\"PrnUtils.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
       },
+      "bundleParent": "Zebra Printer Setup Utilities",
       "id": "c3c53239-2560-4dc7-8b71-a73dcfba1d97"
     },
     {
@@ -3598,8 +4517,10 @@
       "category": "Other",
       "installationType": "available",
       "entraGroups": [],
+      "targetGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Not tracked",
         "method": "not_configured",
@@ -3608,12 +4529,39 @@
       }
     },
     {
+      "displayName": "ZebraDesigner 3",
+      "sourceAppName": "ZebraDesigner 3",
+      "publisher": "Zebra Technologies Corporation",
+      "category": "Other",
+      "installationType": "required",
+      "entraGroups": [],
+      "targetGroups": [
+        {
+          "name": "MEM GT SMA Device",
+          "intent": "required",
+          "type": "device"
+        }
+      ],
+      "isPrerequisite": false,
+      "coreAppDependency": null,
+      "excludeFromJSM": false,
+      "detection": {
+        "status": "Configured rules",
+        "method": "intune_rules",
+        "rules": [],
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Zebra Technologies\\\\ZebraDesigner 3\\\\bin.net\"; fileOrFolderName=\"ZebraDesigner.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "bundleParent": "Zebra Designer 3",
+      "id": "62e7bf3a-1d37-44e6-acab-5d5eaa363a8f"
+    },
+    {
       "displayName": "Zscaler",
       "sourceAppName": "Zscaler",
       "publisher": "Zscaler Inc",
       "category": "Baseline",
       "installationType": "required",
-      "entraGroups": [
+      "entraGroups": [],
+      "targetGroups": [
         {
           "name": "MEM GT SMCD",
           "intent": "required",
@@ -3622,6 +4570,7 @@
       ],
       "isPrerequisite": false,
       "coreAppDependency": null,
+      "excludeFromJSM": false,
       "detection": {
         "status": "Configured rules",
         "method": "intune_rules",
