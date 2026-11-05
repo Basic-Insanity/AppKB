@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-11-04T20:40:21.463563+00:00",
-  "generatedAt": "2026-11-04T20:40:21.463568+00:00",
+  "lastUpdated": "2026-11-05T12:43:06.802743+00:00",
+  "generatedAt": "2026-11-05T12:43:06.802749+00:00",
   "sourceData": {
     "catalogIntelligence": true,
     "appDetectionTracking": true,
@@ -16,31 +16,35 @@
       "publisher": "Igor Pavlov",
       "category": "Dependency app",
       "installationType": "available",
-      "entraGroups": [],
+      "entraGroups": [
+        "MEM-APPU-7-Zip x64"
+      ],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"%ProgramFiles%\\\\7-Zip\"; fileOrFolderName=\"7zFM.exe\"; check32BitOn64System=false; operationType=\"version\"; operator=\"equal\"; comparisonValue=\"24.9.0.0\"\nwin32LobAppFileSystemRule: path=\"%ProgramFiles%\\\\7-Zip\"; fileOrFolderName=\"7zFM.exe\"; check32BitOn64System=false; operationType=\"sizeInBytes\"; operator=\"equal\"; comparisonValue=\"990720\"\nwin32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall\\\\{23170F69-40C1-2702-2409-000001000000}\"; valueName=\"DisplayVersion\"; operationType=\"string\"; operator=\"equal\"; comparisonValue=\"24.09.00.0\""
+      },
+      "id": "196d3e53-4bc1-4e11-87a1-03c091b42014"
     },
     {
       "displayName": "Adobe Acrobat Reader DC",
       "sourceAppName": "Adobe Acrobat Reader",
       "publisher": "Adobe Systems Incorporated",
       "category": "Baseline",
-      "installationType": "available",
+      "installationType": "required",
       "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDP273C0XHQH2\""
+      },
+      "id": "4a9640b7-4367-48a1-9b87-18b83bf514c3"
     },
     {
       "displayName": "Adobe Creative Cloud",
@@ -54,11 +58,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPDLPKWG9SW2WD\""
+      },
+      "id": "acde2591-83c4-4b92-a458-1c3dd6a5caa6"
     },
     {
       "displayName": "Adobe Pro",
@@ -72,11 +77,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "c12e8bd4-a64f-49f0-ae88-9146dc12e2da"
     },
     {
       "displayName": "Alteryx + Supported Database Drivers",
@@ -88,11 +94,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Temp\\\\\"; fileOrFolderName=\"DriversInstalled.txt\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "e07783a2-0dff-4cf5-a183-f5daccb40f15"
     },
     {
       "displayName": "Alteryx Predictive Tools with R 4.2.3",
@@ -153,11 +160,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"AvigilonUnityClient-Standalone-8.7.0.26.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "2dcb57c0-6bd2-43eb-b516-31315fe807b4"
     },
     {
       "displayName": "AWS Command Line Interface v2",
@@ -201,11 +209,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "d07c917a-bc4e-4f17-adba-cff3332aeeb2"
     },
     {
       "displayName": "Beyond Compare 4",
@@ -274,11 +283,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "97b08e06-4d2c-45ec-b844-41be5f1bf6d2"
     },
     {
       "displayName": "Borland BDE",
@@ -290,11 +300,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "c3f35bf2-d8db-40eb-abfa-bdeb6124b784"
     },
     {
       "displayName": "Breitling Warranty Website",
@@ -306,11 +317,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "7a4e721d-2849-441b-a9f9-8bfa63007465"
     },
     {
       "displayName": "C1 Canada Move Links",
@@ -322,11 +334,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"MOVE CA - PROD.lnk\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2024-08-23T04:00:00.000Z\""
+      },
+      "id": "b5180775-c4a3-4536-8388-b40005b3f63d"
     },
     {
       "displayName": "C1 Launcher Links",
@@ -338,11 +351,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"Launch-ELVIS-PROD.lnk.lnk\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2025-01-17T05:00:00.000Z\""
+      },
+      "id": "6c9f9611-1e54-47c6-8a39-6ff2afc6c463"
     },
     {
       "displayName": "C1Links",
@@ -354,11 +368,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"ELVIS PROD.lnk\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2024-06-27T04:00:00.000Z\""
+      },
+      "id": "daf3016a-f9de-49c0-a579-91021cc37071"
     },
     {
       "displayName": "C1Links_7_19",
@@ -370,11 +385,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"ELVIS PROD.lnk\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2024-07-18T04:00:00.000Z\""
+      },
+      "id": "e384715c-1c61-45e4-8396-d197e509a7a3"
     },
     {
       "displayName": "Camtasia 2018",
@@ -487,11 +503,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"AWL_Start.lnk\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "917dfc52-c2dc-4ebd-a769-1f96ebc99ca7"
     },
     {
       "displayName": "Cato VPN",
@@ -539,11 +556,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppProductCodeRule: productCode=\"{ECB9C055-4ECE-438C-AC50-2B09D76377D6}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
+      },
+      "id": "22548624-52d8-4c24-9a93-42726ce66306"
     },
     {
       "displayName": "Citrix Workspace App",
@@ -557,11 +575,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"XPFCG3278HX4X9\""
+      },
+      "id": "daa96bc0-a15f-4f52-a71a-2759bc5ca266"
     },
     {
       "displayName": "Claude CoWork App",
@@ -573,11 +592,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "13d33fd4-8365-4457-bae1-e6ac14dce0b9"
     },
     {
       "displayName": "Company Portal",
@@ -589,11 +609,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"9WZDNCRFJ3PZ\""
+      },
+      "id": "ba24b5a8-1dc1-4f30-b614-411d5320a01e"
     },
     {
       "displayName": "CompleteView Video Client",
@@ -607,11 +628,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppProductCodeRule: productCode=\"{BCEE374B-33D6-4819-9D80-5D627AD5F31A}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
+      },
+      "id": "5eaa2665-74f7-40e0-adaa-288efd3f3582"
     },
     {
       "displayName": "Component Ordering Website",
@@ -623,11 +645,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "f63a1824-c2ed-40d6-8490-97a07eb26b67"
     },
     {
       "displayName": "CounterSketch",
@@ -639,11 +662,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"CounterSketch.lnk\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "e37992d8-3d11-41b3-8aa9-509f6c67dcd9"
     },
     {
       "displayName": "CutePDF Writer",
@@ -673,11 +697,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "de9bd1f9-e17f-442d-bf62-5860b3d8250f"
     },
     {
       "displayName": "DBeaver 25.3.1",
@@ -691,11 +716,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\DBeaver\"; fileOrFolderName=\"dbeaver.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "8b3e3039-17c0-4118-8839-fbe34b698c0d"
     },
     {
       "displayName": "DbVisualizer",
@@ -725,11 +751,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"DC Incidents Form.url\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "9d90e685-868a-4e41-96ca-15844bd78026"
     },
     {
       "displayName": "Dell Bloat Remove",
@@ -741,11 +768,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "eed708d1-db15-41e0-8bed-c26c0e811c66"
     },
     {
       "displayName": "dell™ toad™ data modeler",
@@ -773,11 +801,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\WOW6432Node\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall\\\\Delphi5\"; valueName=\"UninstallString\"; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=\"\""
+      },
+      "id": "4f05ed9e-60ad-4243-ad1a-4ab8902b5d83"
     },
     {
       "displayName": "Delphi 7 and TeamSource",
@@ -791,11 +820,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\Borland\\\\Delphi7\\\\Bin\"; fileOrFolderName=\"delphi32.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "278eece1-038c-4cdc-a9cf-91b0ff3e461c"
     },
     {
       "displayName": "DinoCapture 2.0",
@@ -809,11 +839,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\DinoCapture 2.0\"; fileOrFolderName=\"DinoCapture.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "95a52169-53bd-4864-8086-e91076ad9296"
     },
     {
       "displayName": "DisplayLink",
@@ -825,11 +856,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "2ab47621-a13d-47a2-8c82-a258ddd98fa7"
     },
     {
       "displayName": "DisplayLink Graphics",
@@ -891,11 +923,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\\\\DOM Cert\"; fileOrFolderName=\"DOM Certificate Install.pdf\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "8b559280-5ace-4056-8a33-1e89322b77c1"
     },
     {
       "displayName": "dotNet35",
@@ -907,11 +940,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\.NETFramework\\\\v3.0\"; valueName=null; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=\"\""
+      },
+      "id": "63c1c5c3-bad2-446e-b668-479c444755fa"
     },
     {
       "displayName": "Eclipse Temurin JDK with Hotspot 17.0.7+7 (x64)",
@@ -925,11 +959,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppProductCodeRule: productCode=\"{2D86ADAC-D84A-4867-8172-4E425F0FF8D5}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
+      },
+      "id": "68bbed49-7dbd-4879-bf15-732cc15bf178"
     },
     {
       "displayName": "EIS",
@@ -992,11 +1027,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKEY_CURRENT_USER\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Explorer\\\\Advanced\\\\TaskbarDeveloperSettings\"; valueName=\"TaskbarEndTask\"; operationType=\"string\"; operator=\"equal\"; comparisonValue=\"1\""
+      },
+      "id": "e828adda-bf38-4cc4-8b3c-0aa8a5c55a5d"
     },
     {
       "displayName": "Epson Printer Driver",
@@ -1008,11 +1044,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Windows\\\\System32\\\\drivers\\\\\"; fileOrFolderName=\"TMUSB64.sys\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "924a1d2d-5574-4b87-998b-5b9702e0c9e0"
     },
     {
       "displayName": "Eraser",
@@ -1026,11 +1063,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Eraser\"; fileOrFolderName=\"Eraser.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "17ae8a0f-fe60-4fde-bf6f-0d546ee65318"
     },
     {
       "displayName": "Figma Agent",
@@ -1058,11 +1096,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"%ProgramFiles%\\\\FileZilla FTP Client\"; fileOrFolderName=\"filezilla.exe\"; check32BitOn64System=false; operationType=\"appVersion\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"3.67.1.0\""
+      },
+      "id": "ce9e771a-ab11-4007-99c1-849121a90057"
     },
     {
       "displayName": "Firefox",
@@ -1093,11 +1132,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Fortinet\\\\\"; fileOrFolderName=\"FortiClient\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "5c4ac833-8333-4694-958a-7d3911928f20"
     },
     {
       "displayName": "Game Bar",
@@ -1109,11 +1149,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"9NZKPSTSNW4P\""
+      },
+      "id": "4b9f10a0-4c6e-4204-ab19-f06f8d4bf334"
     },
     {
       "displayName": "Genesys Background Assistant 1.6.414; Genesys Cloud; Genesys Cloud 2.40.811; Genesys Cloud Windows 2.47.870; Genesys Repair Step 1; Genesys Repair Step 2",
@@ -1157,11 +1198,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\Genetec Security Center 5.13\"; fileOrFolderName=\"SecurityDesk.exe\"; check32BitOn64System=true; operationType=\"version\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"5.13.3132.18\""
+      },
+      "id": "0f918d85-7e12-4610-a7e7-708977e01f88"
     },
     {
       "displayName": "Getty Images",
@@ -1173,11 +1215,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "001539f0-dde8-4a24-9c9f-4e6d596f0d80"
     },
     {
       "displayName": "Git",
@@ -1235,16 +1278,17 @@
       "sourceAppName": "GlobalProtect",
       "publisher": "Palo Alto",
       "category": "Baseline",
-      "installationType": "available",
+      "installationType": "required",
       "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Palo Alto Networks\\\\GlobalProtect\"; fileOrFolderName=\"PanGPA.exe\"; check32BitOn64System=false; operationType=\"version\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"6.3.2.525\""
+      },
+      "id": "518d3c76-f6b6-4f9d-bb56-ee1d00fd3b37"
     },
     {
       "displayName": "Globes - Solar Credit Repair",
@@ -1256,11 +1300,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "3db9aa97-948f-47da-9e23-787c5dd3dfa4"
     },
     {
       "displayName": "Grafana Corporate Installer; Grafana_Alloy Update - Pilot",
@@ -1304,11 +1349,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "2da53b3e-6a78-48a2-a876-6df723a9ade5"
     },
     {
       "displayName": "Iced Tea Registry",
@@ -1320,11 +1366,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Edge\\\\AutoOpenFileTypes\"; valueName=\"1\"; operationType=\"string\"; operator=\"equal\"; comparisonValue=\"jnlp\""
+      },
+      "id": "f9c4abd7-fdb9-4f7e-80c1-787519384a0c"
     },
     {
       "displayName": "IDIS+ Center",
@@ -1336,11 +1383,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\IDIS Center\\\\Client\"; fileOrFolderName=\"G2Client.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "c678edec-0d60-4002-931c-c257f027ec09"
     },
     {
       "displayName": "IMS DBSelect",
@@ -1354,11 +1402,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"DBSelect.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "24ac8ab6-1801-4f28-8efa-cc264b0d3956"
     },
     {
       "displayName": "IMS Deployment",
@@ -1372,11 +1421,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "8c85e216-8c18-4b5c-ab15-dcdfcc2d2d47"
     },
     {
       "displayName": "IMS FONT (System Wide)",
@@ -1388,11 +1438,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"Computer\\\\HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Fonts\"; valueName=\"MS Sans Serif 8,10,12,14,18,24\"; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=\"\"\nwin32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"Computer\\\\HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Fonts\"; valueName=\"MS Sans Serif 8,10,12,14,18,24 (120)\"; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=\"\""
+      },
+      "id": "48c3a6be-ea02-4ab4-8bd6-1b7f0d3e24a4"
     },
     {
       "displayName": "IMS SKU Service DLL",
@@ -1404,11 +1455,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\IMS\\\\SkuService\\\\\"; fileOrFolderName=\"Signet.SkuService.ComAdapter.dll\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2024-06-14T12:49:00.000Z\""
+      },
+      "id": "b4cc9e3c-0084-48c0-8ebb-3aa47925939e"
     },
     {
       "displayName": "IMS Web",
@@ -1420,11 +1472,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "23676bee-d0d3-47f1-b9e2-681e5491fd53"
     },
     {
       "displayName": "Informatica Client",
@@ -1452,11 +1505,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "af93878f-5128-40c1-99f1-c37a643fcf98"
     },
     {
       "displayName": "iVMS-4200",
@@ -1484,11 +1538,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "b68c0160-33d0-4663-b92f-a1a36a757f71"
     },
     {
       "displayName": "Jared.com",
@@ -1500,11 +1555,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "753ecbc4-d702-471f-ab76-7ed18033d2a0"
     },
     {
       "displayName": "JBTest Autopilot-popup.ps1",
@@ -1516,11 +1572,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\autopilot\"; fileOrFolderName=\"Popup.ps1\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "031958be-829b-4fb6-883c-3001881e43c9"
     },
     {
       "displayName": "JBTest DotNet",
@@ -1532,11 +1589,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\.NETFramework\\\\v3.0\"; valueName=null; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=\"\""
+      },
+      "id": "1890b45c-7d94-4741-b937-9bde0390279f"
     },
     {
       "displayName": "JBTest ESP Reboot",
@@ -1548,11 +1606,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\autopilot\"; fileOrFolderName=\"Reboot.txt\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "cf73e312-f52b-4ea9-8505-d98ee6c6dd77"
     },
     {
       "displayName": "JBTest InstallWallpapers.ps1",
@@ -1564,11 +1623,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Autopilot\"; fileOrFolderName=\"SetWallpaper.ps1\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "495b979a-68b2-41d1-bb4c-f75483575b66"
     },
     {
       "displayName": "JBTest set-m365link.ps1",
@@ -1580,11 +1640,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"Microsoft Online.lnk\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "66f143d1-9256-40bd-8807-f6d2c54428a5"
     },
     {
       "displayName": "JBTest Taskbar.ps1",
@@ -1596,11 +1657,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\autopilot\"; fileOrFolderName=\"Pins.txt\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "aab296f8-d34c-4e5f-91fe-414d3e4eb813"
     },
     {
       "displayName": "JEWELS Wifi",
@@ -1612,11 +1674,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "99fbdc3e-7b03-47ef-bac0-bb2d7672dc93"
     },
     {
       "displayName": "KAY.com",
@@ -1628,11 +1691,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "dedc6c01-c171-4426-9989-dde1d32f5834"
     },
     {
       "displayName": "Kiosk Browser",
@@ -1644,11 +1708,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "PlatformManaged: Provider=\"Store / WinGet package\"; Identity=\"9NGB5S5XG2KP\""
+      },
+      "id": "f5eeed0e-b989-47b8-ad8a-15b4c81ef68d"
     },
     {
       "displayName": "Lawson",
@@ -1662,11 +1727,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"Lawson901.lnk\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "4792363e-d0ea-414e-b53a-a4ba160332d8"
     },
     {
       "displayName": "Live Person",
@@ -1678,11 +1744,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "a9cb37f4-4e1c-4c43-ab2f-7011303ee0db"
     },
     {
       "displayName": "Logi Tune",
@@ -1724,7 +1791,7 @@
       "sourceAppName": "Microsoft 365",
       "publisher": "Microsoft Corporation",
       "category": "Baseline",
-      "installationType": "available",
+      "installationType": "required",
       "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -1831,11 +1898,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "0b3d5e9f-addf-4e81-94a3-2c5d9f90b74c"
     },
     {
       "displayName": "NiCE Screen Agent",
@@ -1847,18 +1915,19 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "42ff5a4e-1daa-441c-8513-40eed8acb582"
     },
     {
       "displayName": "NinjaOne Agent; NinjaOne Agent STS",
       "sourceAppName": "NinjaOne",
       "publisher": "NinjaRMM LLC",
       "category": "Baseline",
-      "installationType": "available",
+      "installationType": "required",
       "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -1933,11 +2002,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Oracle\\\\product\\\\11.2.0\"; fileOrFolderName=\"client_2\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "854f2a05-3a14-4d9b-a2c3-6e560e976691"
     },
     {
       "displayName": "Oracle 11g 64-bit",
@@ -1949,11 +2019,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Oracle\\\\product\\\\11.2.0\"; fileOrFolderName=\"client_1\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "f4d5c913-be0f-431c-9f53-76e96df82322"
     },
     {
       "displayName": "Outlook Web",
@@ -1965,11 +2036,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "2c0ca34a-db09-4627-9cbb-539976d672aa"
     },
     {
       "displayName": "PL\\SQL Developer 12.0.2",
@@ -1981,11 +2053,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\PLSQL Developer 12\"; fileOrFolderName=\"plsqldev.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "b253b06a-67e8-4d55-8fec-d984288de76f"
     },
     {
       "displayName": "Plex - Web Link",
@@ -1997,11 +2070,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "c465644a-73a1-4df4-a4ea-fece9c7f33a3"
     },
     {
       "displayName": "Plex Component Host",
@@ -2027,16 +2101,17 @@
       "sourceAppName": "Privilege Manager Agents",
       "publisher": "Thycotic",
       "category": "Baseline",
-      "installationType": "available",
+      "installationType": "required",
       "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "5922b413-1960-4d98-832b-3e1176410290"
     },
     {
       "displayName": "Poly Lens Desktop",
@@ -2113,11 +2188,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "d300bb89-06e1-4bac-96d0-b9e47386816f"
     },
     {
       "displayName": "PrinterLogic Client",
@@ -2129,11 +2205,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppProductCodeRule: productCode=\"{A9DE0858-9DDD-4E1B-B041-C2AA90DCBF74}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
+      },
+      "id": "4d8f8177-820c-4b17-baf4-6fa8324d58b4"
     },
     {
       "displayName": "PuTTY",
@@ -2180,18 +2257,19 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "c8d00f8d-ae6b-4439-8cea-2f5e86838c26"
     },
     {
       "displayName": "rapid7",
       "sourceAppName": "rapid7",
       "publisher": "Rapid7, Inc.",
       "category": "Other",
-      "installationType": "available",
+      "installationType": "required",
       "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -2207,7 +2285,7 @@
       "sourceAppName": "Rapid7 Insight Agent",
       "publisher": "Rapid7, Inc.",
       "category": "Baseline",
-      "installationType": "available",
+      "installationType": "required",
       "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
@@ -2228,11 +2306,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\RealVNC\\\\VNC Viewer\"; fileOrFolderName=\"vncviewer.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "16c7abea-317b-4d3c-a438-4170793fb06b"
     },
     {
       "displayName": "Repair 2.0",
@@ -2244,11 +2323,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "56cabeb3-318e-4db0-befd-056bc6d68ac8"
     },
     {
       "displayName": "Repair Inquiry",
@@ -2260,11 +2340,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "663306d4-ef7b-4fd0-b036-ade9624d53bf"
     },
     {
       "displayName": "Reprintinstall.bat",
@@ -2276,11 +2357,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\xstore_v17\\\\zale_config\"; fileOrFolderName=\"selector_v17.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "bfe9e2f1-40b8-458c-a439-8b5c100060fe"
     },
     {
       "displayName": "Reset Update Policy Manager",
@@ -2292,11 +2374,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "57bdcf69-01b9-4490-b79b-0f445ef213dc"
     },
     {
       "displayName": "RMS Install",
@@ -2308,11 +2391,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\IcedTeaWeb\\\\WebStart\\\\bin\\\\\"; fileOrFolderName=\"javaws.exe\"; check32BitOn64System=true; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "89fe69c2-0a21-4630-864c-6f6a81690bf1"
     },
     {
       "displayName": "RMS Repair",
@@ -2324,11 +2408,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppPowerShellScriptRule: displayName=null; enforceSignatureCheck=false; runAs32Bit=false; runAsAccount=null; operationType=\"notConfigured\"; operator=\"notConfigured\"; comparisonValue=null; scriptContent=see script below"
+      },
+      "id": "a217a8b2-1a88-4fbe-8b0a-312d9f43d382"
     },
     {
       "displayName": "RMSBatch File Copy",
@@ -2340,11 +2425,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Users\\\\Public\\\\Desktop\"; fileOrFolderName=\"RMSbatch\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "263cf015-eea6-46d4-b056-48c5e819a2f2"
     },
     {
       "displayName": "SAP EPM Add-Ins",
@@ -2356,11 +2442,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\temp\"; fileOrFolderName=\"EPMinstall.log\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "5e52258b-ffe2-486f-b1e2-977cebe6fd6c"
     },
     {
       "displayName": "SAP GUI",
@@ -2374,11 +2461,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppRegistryRule: check32BitOn64System=true; keyPath=\"Computer\\\\HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\WOW6432Node\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall\\\\SAPGUI\"; valueName=\"DisplayName\"; operationType=\"string\"; operator=\"equal\"; comparisonValue=\"SAP GUI for Windows 8.00 32bit  (Patch 11)\""
+      },
+      "id": "e80df116-ef8c-4292-88a6-d9f7dfaf797d"
     },
     {
       "displayName": "SAP HANA Studio 64bit",
@@ -2406,27 +2494,29 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "b1f85697-e5d8-4dab-86d9-8a54a532fdc0"
     },
     {
       "displayName": "SentinelOne",
       "sourceAppName": "Sentinel Agent",
       "publisher": "Sentinel One",
       "category": "Baseline",
-      "installationType": "available",
+      "installationType": "required",
       "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\\"; fileOrFolderName=\"SentinelOne\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "45d7d46e-e7cf-4eb1-8776-08101b0f1eea"
     },
     {
       "displayName": "Signage Ordering Website",
@@ -2438,11 +2528,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "a97dcad2-1586-4f68-b105-0242e034768c"
     },
     {
       "displayName": "SIGnet",
@@ -2454,11 +2545,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "118e2a4c-535c-4256-81bd-dcf49d2b57d8"
     },
     {
       "displayName": "Signet Font Update",
@@ -2470,11 +2562,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppRegistryRule: check32BitOn64System=false; keyPath=\"HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Fonts\"; valueName=\"Figtree-Regular (TrueType)\"; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=\"\""
+      },
+      "id": "fa9d2b5c-7f91-4764-a516-6118c12a6935"
     },
     {
       "displayName": "Signet Shipping Handheld",
@@ -2486,11 +2579,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "2869a08d-524b-4eb2-b573-dc6902d1e5af"
     },
     {
       "displayName": "Slack",
@@ -2567,11 +2661,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "b471e452-20d9-48c7-b3ea-5b582466a162"
     },
     {
       "displayName": "Sterling User Maintenance File Update",
@@ -2583,11 +2678,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Sterling Jewelers Inc\\\\Admin\\\\User Maintenance\"; fileOrFolderName=\"SterlingUserMaint.exe\"; check32BitOn64System=false; operationType=\"modifiedDate\"; operator=\"greaterThanOrEqual\"; comparisonValue=\"2023-05-30T07:00:00.000Z\""
+      },
+      "id": "c43d6bf3-0679-434d-800a-66e6731a42b1"
     },
     {
       "displayName": "Storyline 2",
@@ -2599,11 +2695,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\Articulate\\\\Articulate Storyline 2\"; fileOrFolderName=\"Storyline.exe\"; check32BitOn64System=true; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "a9bdf8ee-ae16-4224-94aa-643c507e5df1"
     },
     {
       "displayName": "Tableau 2024.3; Tableau Prep Builder 2025.3",
@@ -2633,11 +2730,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Tableau\\\\Tableau Prep Builder 2025.3\"; fileOrFolderName=\"Tableau Prep Builder.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "5812b6de-d2a6-4001-8596-2c760e8c9db8"
     },
     {
       "displayName": "Teams",
@@ -2649,11 +2747,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Platform-managed detection",
+        "method": "platform_managed",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "PlatformManaged: Provider=\"Office products\"; Identity=[\"o365ProPlusRetail\"]"
+      },
+      "id": "0e100456-1710-4165-863f-884d4018e4a5"
     },
     {
       "displayName": "Toad 12.5",
@@ -2665,11 +2764,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Quest Software\\\\Toad for Oracle 12.5\"; fileOrFolderName=\"Toad.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "f7e5b2de-bb1a-4c47-a258-57e505ab3611"
     },
     {
       "displayName": "Toad 2025 R2",
@@ -2681,11 +2781,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Quest Software\\\\Toad for Oracle 2025 R2 Edition\\\\Toad for Oracle 25.2\"; fileOrFolderName=\"Toad.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "68ed4e85-92dd-4896-8b04-4614321af735"
     },
     {
       "displayName": "TSP100",
@@ -2747,11 +2848,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppProductCodeRule: productCode=\"{C7BBB812-4B12-4B50-B8C2-57029675A993}\"; productVersionOperator=\"notConfigured\"; productVersion=null"
+      },
+      "id": "69c1d5fa-2ae6-4f84-add3-553f0c329b1d"
     },
     {
       "displayName": "VIGIL Client",
@@ -2795,11 +2897,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "93f58d56-df96-4d09-a29c-90dc1f3f5eb5"
     },
     {
       "displayName": "VLC Media Player",
@@ -2813,11 +2916,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\VideoLAN\\\\VLC\"; fileOrFolderName=\"vlc.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "e2212264-09f9-4d36-b224-b7b3e09b4910"
     },
     {
       "displayName": "Waitwhile",
@@ -2829,11 +2933,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "8e9fb2d5-7c16-4b54-884d-a99d054e3ff6"
     },
     {
       "displayName": "Waitwhile - Login",
@@ -2845,11 +2950,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "0adee510-fc0f-45fc-8cd0-8ab5950a61b7"
     },
     {
       "displayName": "Windows Subsystem for Linux Update",
@@ -2914,11 +3020,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\xstore_v17\\\\zale_config\"; fileOrFolderName=\"selector_v17.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "d58a04ff-3c6d-4c50-8457-c45d9570a1fd"
     },
     {
       "displayName": "Zales Images",
@@ -2930,11 +3037,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "14c532ae-858f-4cfc-b6b6-3c97791f5129"
     },
     {
       "displayName": "Zales Repair",
@@ -2946,11 +3054,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "38290fa7-6e82-4cf3-a2c3-e094b2dba34f"
     },
     {
       "displayName": "Zales.com",
@@ -2962,11 +3071,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Not applicable - web link",
+        "method": "not_applicable",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "Not applicable - web link"
+      },
+      "id": "18a4c008-0926-48c8-b7dc-6964cd851996"
     },
     {
       "displayName": "Zebra Browser Print version 1.3.2.489",
@@ -2996,11 +3106,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files\\\\Zebra Technologies\\\\ZebraDesigner 3\\\\bin.net\"; fileOrFolderName=\"ZebraDesigner.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "62e7bf3a-1d37-44e6-acab-5d5eaa363a8f"
     },
     {
       "displayName": "Zebra Printer Setup Utilities",
@@ -3014,11 +3125,12 @@
       "isPrerequisite": false,
       "coreAppDependency": null,
       "detection": {
-        "status": "Not tracked",
-        "method": "not_configured",
+        "status": "Configured rules",
+        "method": "intune_rules",
         "rules": [],
-        "rule": ""
-      }
+        "rule": "win32LobAppFileSystemRule: path=\"C:\\\\Program Files (x86)\\\\Zebra Technologies\\\\Zebra Setup Utilities\\\\App\"; fileOrFolderName=\"PrnUtils.exe\"; check32BitOn64System=false; operationType=\"exists\"; operator=\"notConfigured\"; comparisonValue=null"
+      },
+      "id": "c3c53239-2560-4dc7-8b71-a73dcfba1d97"
     },
     {
       "displayName": "Zebra Setup Utilities",
@@ -3041,7 +3153,7 @@
       "sourceAppName": "Zscaler",
       "publisher": "Zscaler Inc",
       "category": "Baseline",
-      "installationType": "available",
+      "installationType": "required",
       "entraGroups": [],
       "isPrerequisite": false,
       "coreAppDependency": null,
